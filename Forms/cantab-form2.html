@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wappsystem-form.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID>
+    <!--third html start -->
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id="F_18">
+                            <h3 id="title_18">Baseline - CANTAB</h3>
+                            
+                            <div id="participant_div_18">
+                                <div class="form-group">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Participant</span>
+                                            <input type="text" name="Participant" class="form-control ui-autocomplete-input" id="Participant_18" data-id="Participant" autocomplete="off">
+                                        </label><br>
+                                        <label><span class="">Participant ID</span>
+                                            <input type="text" name="Participant_uid" class="form-control" readonly="">
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+							<button type="submit" id="submit_18" class="btn btn-primary btn-lg">Submit</button>
+							<hr>
+                            
+                            
+							<div class="row px-4">
+								<div class="col">
+								   <span>File</span>
+								   <div class="form-control">
+									   <u style="cursor:pointer" id="link_File_Name_18"></u>
+									   <br>
+									   <input type="file" name="File_Name" style="margin-top:6px"> &nbsp;&nbsp;&nbsp; <button type="button" id="x_File_Name_18" style="display: none;">Remove</button>
+								   </div>
+                                </div>
+                            </div>
+							<hr>
+                            <div class="form-group"><label><span class="">Select participant</span><select id="rowSelector" class="form-control"></select></label></div>
+							<div id="dynamic_part_18"><div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>cantab number</span>
+<input class="form-control" type="text" name="cantab_number">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>PALTEA28</span>
+<input class="form-control" type="text" name="PALTEA28">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>PALTA28</span>
+<input class="form-control" type="text" name="PALTA28">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>PALFAMS28</span>
+<input class="form-control" type="text" name="PALFAMS28">
+</label></div>
+</div>
+<div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>PALMETS28</span>
+<input class="form-control" type="text" name="PALMETS28">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>PALNPR28</span>
+<input class="form-control" type="text" name="PALNPR28">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>PALTEA2</span>
+<input class="form-control" type="text" name="PALTEA2">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>PALTEA4</span>
+<input class="form-control" type="text" name="PALTEA4">
+</label></div>
+</div>
+<div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>PALTEA6</span>
+<input class="form-control" type="text" name="PALTEA6">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>PALTEA8</span>
+<input class="form-control" type="text" name="PALTEA8">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>PALTEA12</span>
+<input class="form-control" type="text" name="PALTEA12">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>PALTE28</span>
+<input class="form-control" type="text" name="PALTE28">
+</label></div>
+</div>
+<div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>PALTE2</span>
+<input class="form-control" type="text" name="PALTE2">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>PALTE4</span>
+<input class="form-control" type="text" name="PALTE4">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>PALTE6</span>
+<input class="form-control" type="text" name="PALTE6">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>PALTE8</span>
+<input class="form-control" type="text" name="PALTE8">
+</label></div>
+</div>
+<div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>PALTE12</span>
+<input class="form-control" type="text" name="PALTE12">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>PALTA2</span>
+<input class="form-control" type="text" name="PALTA2">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>PALTA4</span>
+<input class="form-control" type="text" name="PALTA4">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>PALTA6</span>
+<input class="form-control" type="text" name="PALTA6">
+</label></div>
+</div>
+<div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>PALTA8</span>
+<input class="form-control" type="text" name="PALTA8">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>PALTA12</span>
+<input class="form-control" type="text" name="PALTA12">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>RVPML</span>
+<input class="form-control" type="text" name="RVPML">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>RVPMDL</span>
+<input class="form-control" type="text" name="RVPMDL">
+</label></div>
+</div>
+<div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>RVPLSD</span>
+<input class="form-control" type="text" name="RVPLSD">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>RVPA</span>
+<input class="form-control" type="text" name="RVPA">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>RVPTH</span>
+<input class="form-control" type="text" name="RVPTH">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>RVPTFA</span>
+<input class="form-control" type="text" name="RVPTFA">
+</label></div>
+</div>
+<div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>RVPPH</span>
+<input class="form-control" type="text" name="RVPPH">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>RVPPFA</span>
+<input class="form-control" type="text" name="RVPPFA">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>RVPTM</span>
+<input class="form-control" type="text" name="RVPTM">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDEPRE</span>
+<input class="form-control" type="text" name="IEDEPRE">
+</label></div>
+</div>
+<div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>IEDEEDS</span>
+<input class="form-control" type="text" name="IEDEEDS">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDYERT</span>
+<input class="form-control" type="text" name="IEDYERT">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDYERTA</span>
+<input class="form-control" type="text" name="IEDYERTA">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDECS</span>
+<input class="form-control" type="text" name="IEDECS">
+</label></div>
+</div>
+<div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>IEDES1</span>
+<input class="form-control" type="text" name="IEDES1">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDES2</span>
+<input class="form-control" type="text" name="IEDES2">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDES3</span>
+<input class="form-control" type="text" name="IEDES3">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDES4</span>
+<input class="form-control" type="text" name="IEDES4">
+</label></div>
+</div>
+<div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>IEDES5</span>
+<input class="form-control" type="text" name="IEDES5">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDES6</span>
+<input class="form-control" type="text" name="IEDES6">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDES7</span>
+<input class="form-control" type="text" name="IEDES7">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDES8</span>
+<input class="form-control" type="text" name="IEDES8">
+</label></div>
+</div>
+<div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>IEDES9</span>
+<input class="form-control" type="text" name="IEDES9">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDYCOST</span>
+<input class="form-control" type="text" name="IEDYCOST">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTT</span>
+<input class="form-control" type="text" name="IEDTT">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTTA</span>
+<input class="form-control" type="text" name="IEDTTA">
+</label></div>
+</div>
+<div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTTS1</span>
+<input class="form-control" type="text" name="IEDTTS1">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTTS2</span>
+<input class="form-control" type="text" name="IEDTTS2">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTTS3</span>
+<input class="form-control" type="text" name="IEDTTS3">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTTS4</span>
+<input class="form-control" type="text" name="IEDTTS4">
+</label></div>
+</div>
+<div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTTS5</span>
+<input class="form-control" type="text" name="IEDTTS5">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTTS6</span>
+<input class="form-control" type="text" name="IEDTTS6">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTTS7</span>
+<input class="form-control" type="text" name="IEDTTS7">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTTS8</span>
+<input class="form-control" type="text" name="IEDTTS8">
+</label></div>
+</div>
+<div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTTS9</span>
+<input class="form-control" type="text" name="IEDTTS9">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDYSTCO</span>
+<input class="form-control" type="text" name="IEDYSTCO">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTL</span>
+<input class="form-control" type="text" name="IEDTL">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTLS1</span>
+<input class="form-control" type="text" name="IEDTLS1">
+</label></div>
+</div>
+<div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTLS2</span>
+<input class="form-control" type="text" name="IEDTLS2">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTLS3</span>
+<input class="form-control" type="text" name="IEDTLS3">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTLS4</span>
+<input class="form-control" type="text" name="IEDTLS4">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTLS5</span>
+<input class="form-control" type="text" name="IEDTLS5">
+</label></div>
+</div>
+<div class="row px-4">
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTLS6</span>
+<input class="form-control" type="text" name="IEDTLS6">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTLS7</span>
+<input class="form-control" type="text" name="IEDTLS7">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTLS8</span>
+<input class="form-control" type="text" name="IEDTLS8">
+</label></div>
+<div class="col-sm-12 col-lg-3"><label> <span>IEDTLS9</span>
+<input class="form-control" type="text" name="IEDTLS9">
+</label></div>
+</div>
+
+</div>
+
+                        </form>                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function F__ID() {
+            //-------------------------------------
+            //VmInclude: '__COMPONENT__/f/form.01.js'
+            //VmInclude: __CURRENT_PATH__/shared-form.js
+            //-------------------------------------
+
+        }
+    </script>
+    <style>
+        #D__ID .mt-95 {
+            max-width: 800px;
+        }
+
+        /*VmInclude:__CURRENT_PATH__/wappsystem-form.css*/
+    </style>
+</div></body></html>

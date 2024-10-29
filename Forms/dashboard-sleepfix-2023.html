@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wappsystem-form.html.css" rel="stylesheet" />
+        <link href="form.01.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID style="padding-left:50px">
+    <div class='nav__ID' >
+        <span>Unscheduled Records</span>
+    <ul>
+        <li><a href=adverse-event-form4.html>Adverse event</a></li>
+        <li><a href=serious-adverse-event-form2.html>Serious Adverse event</a></li>
+        <li><a href=serious-adverse-event-follow-up-form2.html>Serious Adverse event follow-up</a></li>
+    </ul>
+    <span>Pre-Screening</span>
+    <ul>
+        <li><a href="eligibility-sleepfix-form.html"> Screening</a></li>
+        <li><a href="contact-sleepfix-form.html"> Contact details</a></li>
+    </ul>
+</div>
+<div class='nav__ID' >
+    <span>Baseline Questionnaires</span>
+    <ul>
+        <li><a href=demographics-form3.html>1. Demographics</a></li>
+        <li><a href=PSQI-form2.html>2. Pittsburgh Sleep Quality Index (PSQI)</a></li>
+        <li><a href=GAD-7-form.html>3. Generalised Anxiety Disorder (GAD-7)</a></li>
+        <li><a href=PHQ-8-form.html>4. Patient health questionnaire (PHQ-8)</a></li>
+        <li><a href=FFS-form2.html>5. Flinders Fatigue Scale (FFS)</a></li>
+        <li><a href=EQ-5D-form2.html>6. Quality of life (EQ-5D)</a></li>
+        <li><a href=SMP-form.html>7. Sleep medication and productivity (SMP)</a></li>
+        <p class="small font-italic text-muted mt-1"></p>
+    </ul>
+</div>
+<div class='nav__ID' >
+    <span>Week 4</span>
+    <ul>
+        <li><a href=ISI-form2.html>1. Insomnia Severity Index (ISI)</a></li>
+        <li><a href=AEC-form.html>2. Adverse Event Check-in (AEC)</a></li>
+        <p class="small font-italic text-muted mt-1"></p>
+    </ul>
+    <span>Week 8</span>
+    <ul>
+        <li><a href=ISI-form2.html>1. Insomnia Severity Index (ISI)</a></li>
+        <li><a href=PSQI-form2.html>2. Pittsburgh Sleep Quality Index (PSQI)</a></li>
+        <li><a href=GAD-7-form.html>3. Generalised Anxiety Disorder (GAD-7)</a></li>
+        <li><a href=PHQ-8-form.html>4. Patient health questionnaire (PHQ-8)</a></li>
+        <li><a href=FFS-form2.html>5. Flinders Fatigue Scale (FFS)</a></li>
+        <li><a href=EQ-5D-form2.html>6. Quality of life (EQ-5D)</a></li>
+        <li><a href=SMP-form.html>7. Sleep medication and productivity (SMP)</a></li>
+        <li><ax href=SUS-form.html>8. User Experience (SUS) - Don't have specs.</a></li>
+        <li><a href=AEC-form.html>9. Adverse Event Check-in (AEC)</a></li>
+        <p class="small font-italic text-muted mt-1"></p>
+    </ul>
+</div>
+</body>
+</html>

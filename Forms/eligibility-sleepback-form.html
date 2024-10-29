@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wapp-form.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID class="bg">
+  <div class="container mt-95">
+    <div class="formbox">
+      <form id="F__ID">
+        <div id=S1__ID>
+          <div class="formgroup">
+            <fieldset class="">
+              <span class="question">
+                <p>Pre-screening Survey</p>
+              </span>
+              <span>The following survey will ask questions to assess whether you are eligible to partake in this study.
+                If you are eligible you will be asked to submit your personal contact details so that you can be
+                contacted
+                in order to arrange a time for a telephone interview. The purpose of the telephone interview is to
+                confirm
+                responses from the pre-screening survey, to explain verbally what is involved in the study and to answer
+                any questions you have about the study. Completion of this pre-screening survey; the telephone
+                interview;
+                and a subsequent baseline questionnaire, is required for all participants before they are randomized to
+                a
+                study group.</span>
+            </fieldset>
+          </div>
+          <div class="formgroup zoom">
+            <span class="question"></span>
+            <fieldset class="grid-container-1">
+              <div class="">
+                <label><span class="question">1. Do you have pain in the lower back region which has been occurring for
+                    <b>3 months or more?</span></label><br>
+                <input id="LBP_3_month_1__ID" name="LBP_3_month" type="radio" value="0" required>
+                <label class="rd_btn" for="LBP_3_month_1__ID">Yes</label>
+                <input id="LBP_3_month_2__ID" name="LBP_3_month" type="radio" value="1">
+                <label class="rd_btn" for="LBP_3_month_2__ID">No</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="formgroup zoom">
+            <span class="question"></span>
+            <fieldset class="grid-container-1">
+              <div class="">
+                <label><span class="question">2. Do you have a current diagnosis or strong inclination of sciatica or
+                    other source of neuropathic pain associated with your low back pain? </span></label><br>
+                <input id="Sciatica_1__ID" name="Sciatica" type="radio" value="0" required>
+                <label class="rd_btn" for="Sciatica_1__ID">Yes</label>
+                <input id="Sciatica_2__ID" name="Sciatica" type="radio" value="1">
+                <label class="rd_btn" for="Sciatica_2__ID">No</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="formgroup zoom">
+            <div class="questiongroup">
+              <fieldset class="">
+                <span class="question">
+                  <p>3. Do you have a specific diagnosis of chronic low back pain by doctor or physiotherapist? </p>
+                </span>
+                <input id="Diagnosis_0__ID" name="Diagnosis" type="radio" value="0" required>
+                <label id="Diagnosis_button_text_0__ID" class="rd_btn width_btn_full" for="Diagnosis_0__ID">No</label><br>
+                <input id="Diagnosis_1__ID" name="Diagnosis" type="radio" value="1">
+                <label id="Diagnosis_button_text_1__ID" class="rd_btn width_btn_full" for="Diagnosis_1__ID">Non-specific</label><br>
+                <input id="Diagnosis_2__ID" name="Diagnosis" type="radio" value="2">
+                <label id="Diagnosis_button_text_2__ID" class="rd_btn width_btn_full" for="Diagnosis_2__ID">Mechanical (degenerative discs or facets, herniated disc, spinal stenosis, spondylosis)</label><br>
+                <input id="Diagnosis_3__ID" name="Diagnosis" type="radio" value="3">
+                <label id="Diagnosis_button_text_3__ID" class="rd_btn width_btn_full" for="Diagnosis_3__ID">Referred pain (e.g., from an unhealthy organ)</label><br>
+                <input id="Diagnosis_4__ID" name="Diagnosis" type="radio" value="4">
+                <label id="Diagnosis_button_text_4__ID" class="rd_btn width_btn_full" for="Diagnosis_4__ID">Nonmechanical (cancer, inflammatory arthritis, infection)</label><br>
+              </fieldset>
+            </div>
+          </div>
+          <div class="formgroup right" id="S1_check__ID" style="display:xnone">
+            <span >Please answer all questions</span>
+          </div>
+          <div class="formgroup right">
+            <button type="submit" d=1 class="submit_btn">Next</button>
+          </div>
+        </div>
+        <div id=S2__ID>
+          <div class="formgroup zoom">
+            <fieldset class="">
+              <span class="question">4. What is your age</span>
+              <div class="grid-container-1">
+                <div>
+                  <label>
+                    <span class="question"></span>
+                    <input id="abcd" type=number name="Age" class="formcontrol " min=18 max=80 step=1 placeholder=""
+                      required />
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="formgroup zoom">
+            <span class="question"></span>
+            <fieldset class="grid-container-1">
+              <div class="">
+                <label><span class="question">5. Are you fluent in English?</span></label><br>
+                <input id="English_1__ID" name="English" type="radio" value="0" required>
+                <label class="rd_btn" for="English_1__ID">Yes</label>
+                <input id="English_2__ID" name="English" type="radio" value="1">
+                <label class="rd_btn" for="English_2__ID">No</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="formgroup zoom">
+            <span class="question"></span>
+            <fieldset class="grid-container-1">
+              <div class="">
+                <label><span class="question">6. Do you have a smartphone?</span></label><br>
+                <input id="Smartphone_1__ID" name="Smartphone" type="radio" value="0" required>
+                <label class="rd_btn" for="Smartphone_1__ID">Yes</label>
+                <input id="Smartphone_2__ID" name="Smartphone" type="radio" value="1">
+                <label class="rd_btn" for="Smartphone_2__ID">No</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="formgroup zoom">
+            <div class="questiongroup">
+              <fieldset class="">
+                <span class="question">
+                  <p>7. Are you a shift-worker (in a regular work week)?</p>
+                </span>
+                <input id="Shft_wrk_0__ID" name="Shft_wrk" type="radio" value="0" required>
+                <label id="Shft_wrk_button_text_0__ID" class="rd_btn width_btn_full" for="Shft_wrk_0__ID">No</label><br>
+                <input id="Shft_wrk_1__ID" name="Shft_wrk" type="radio" value="1">
+                <label id="Shft_wrk_button_text_1__ID" class="rd_btn width_btn_full" for="Shft_wrk_1__ID">Yes, I am on rotating
+                  shifts</label><br>
+                <input id="Shft_wrk_2__ID" name="Shft_wrk" type="radio" value="2">
+                <label id="Shft_wrk_button_text_2__ID" class="rd_btn width_btn_full" for="Shft_wrk_2__ID">Yes, I am on shifts between
+                  hours of 8am - 8pm</label><br>
+                <input id="Shft_wrk_3__ID" name="Shft_wrk" type="radio" value="3">
+                <label id="Shft_wrk_button_text_3__ID" class="rd_btn width_btn_full" for="Shft_wrk_3__ID">Yes, I am on shifts outside
+                  hours of 8am - 8pm</label><br>
+              </fieldset>
+            </div>
+          </div>
+          <div class="formgroup zoom">
+            <span class="question"></span>
+            <fieldset class="grid-container-1">
+              <div class="">
+                <label><span class="question">8. Have you travelled to a destination with more than a 2-hour time
+                    difference in the last 7-days? </span></label><br>
+                <input id="time_diff_1__ID" name="time_diff" type="radio" value="0" required>
+                <label class="rd_btn" for="time_diff_1__ID">Yes</label>
+                <input id="time_diff_2__ID" name="time_diff" type="radio" value="1">
+                <label class="rd_btn" for="time_diff_2__ID">No</label>
+              </div>
+            </fieldset>
+          </div>
+          <div id="S3_8a__ID">
+            <div class="formgroup zoom">
+              <span class="question"></span>
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">8a. Do you have any jetlag symptoms?</span></label><br>
+                  <input id="jetlag_1__ID" name="jetlag" type="radio" value="0" required>
+                  <label class="rd_btn" for="jetlag_1__ID">Yes</label>
+                  <input id="jetlag_2__ID" name="jetlag" type="radio" value="1">
+                  <label class="rd_btn" for="jetlag_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="formgroup right" id="S2_check__ID" style="display:xnone">
+            <span >Please answer all questions</span>
+          </div>
+          <div class="formgroup submit_dual_btn">
+            <button type="button" d=-1 class="submit_btn">Previous</button>
+            <button type="submit" d=1 class="submit_btn">Next</button>
+          </div>
+        </div>
+        <div id=S3__ID>
+          <div class="formgroup zoom">
+            <span class="question"></span>
+            <fieldset class="grid-container-1">
+              <div class="">
+                <label><span class="question">9. Have you been diagnosed with any one or more of the following medical
+                    and/or psychiatric illnesses/disorders? <br><i>Major Depressive Disorder, Heart failure, Epilepsy,
+                      Bi-polar disorder, Dementia, Mild Cognitive Impairment</i> </span></label><br>
+                <input id="Psych_1__ID" name="Psych" type="radio" value="0" required>
+                <label class="rd_btn" for="Psych_1__ID">Yes</label>
+                <input id="Psych_2__ID" name="Psych" type="radio" value="1">
+                <label class="rd_btn" for="Psych_2__ID">No</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="formgroup zoom">
+            <span class="question"></span>
+            <fieldset class="grid-container-1">
+              <div class="">
+                <label><span class="question">10. Have you been diagnosed with any one or more of the following sleep
+                    disorders? <br><i>Obstructive Sleep Apnoea, Sleep Behaviour Disorder (i.e sleep talking/walking, REM),
+                      Circadian Rhythm Disorder, Restless leg syndrome, Narcolepsy or Bruxism (teeth grinding)</i>
+                  </span></label><br>
+                <input id="sleep_disorder_1__ID" name="sleep_disorder" type="radio" value="0" required>
+                <label class="rd_btn" for="sleep_disorder_1__ID">Yes</label>
+                <input id="sleep_disorder_2__ID" name="sleep_disorder" type="radio" value="1">
+                <label class="rd_btn" for="sleep_disorder_2__ID">No</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="formgroup zoom">
+            <span class="question"></span>
+            <fieldset class="grid-container-1">
+              <div class="">
+                <label><span class="question">11. Are you currently using any of the following therapies/devices?
+                    <br><i>CPAP, dental snoring devices</i> </span></label><br>
+                <input id="trpy_dev_1__ID" name="trpy_dev" type="radio" value="0" required>
+                <label class="rd_btn" for="trpy_dev_1__ID">Yes</label>
+                <input id="trpy_dev_2__ID" name="trpy_dev" type="radio" value="1">
+                <label class="rd_btn" for="trpy_dev_2__ID">No</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="formgroup zoom">
+            <span class="question"></span>
+            <fieldset class="grid-container-1">
+              <div class="">
+                <label><span class="question">12. Are you currently receiving psychotherapy for insomnia including
+                    Cognitive Behavioural Therapy (CBT)? </span></label><br>
+                <input id="CBT_1__ID" name="CBT" type="radio" value="0" required>
+                <label class="rd_btn" for="CBT_1__ID">Yes</label>
+                <input id="CBT_2__ID" name="CBT" type="radio" value="1">
+                <label class="rd_btn" for="CBT_2__ID">No</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="formgroup zoom">
+            <span class="question"></span>
+            <fieldset class="grid-container-1">
+              <div class="">
+                <label><span class="question">13. Does your job require you to regularly drive or operate heavy
+                    machinery?
+                  </span></label><br>
+                <input id="driving_job_1__ID" name="driving_job" type="radio" value="0" required>
+                <label class="rd_btn" for="driving_job_1__ID">Yes</label>
+                <input id="driving_job_2__ID" name="driving_job" type="radio" value="1">
+                <label class="rd_btn" for="driving_job_2__ID">No</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="formgroup right" id="S3_check__ID" style="display:xnone">
+            <span >Please answer all questions</span>
+          </div>
+          <div class="formgroup submit_dual_btn">
+            <button type="button" d=-1 class="submit_btn">Previous</button>
+            <button type="submit" d=1 class="submit_btn">Next</button>
+          </div>
+        </div>
+        <div id=S4__ID>
+          <div class="formgroup">
+            <fieldset class="">
+              <span class="">
+                <p></p>
+              </span>
+              <span>Please rate the current severity of your insomnia problems <b>over the last 2 weeks:</b></span>
+            </fieldset>
+          </div>
+          <div class="formgroup zoom">
+            <div class="questiongroup ">
+              <fieldset class="">
+                <span class="question">1. Difficulty falling asleep:</span>
+                <div class="grid-container-5">
+                  <div>
+                    <input id="ISI_1_0__ID" name="ISI_1" type="radio" value="0" required>
+                    <label id="ISI_1_button_text_0__ID" class="rd_btn width_80" for="ISI_1_0__ID">None</label>
+                  </div>
+                  <div>
+                    <input id="ISI_1_1__ID" name="ISI_1" type="radio" value="1">
+                    <label id="ISI_1_button_text_1__ID" class="rd_btn width_80" for="ISI_1_1__ID">Mild</label>
+                  </div>
+                  <div>
+                    <input id="ISI_1_2__ID" name="ISI_1" type="radio" value="2">
+                    <label id="ISI_1_button_text_2__ID" class="rd_btn width_80" for="ISI_1_2__ID">Moderate</label>
+                  </div>
+                  <div>
+                    <input id="ISI_1_3__ID" name="ISI_1" type="radio" value="3">
+                    <label id="ISI_1_button_text_3__ID" class="rd_btn width_80" for="ISI_1_3__ID">Severe</label>
+                  </div>
+                  <div>
+                    <input id="ISI_1_4__ID" name="ISI_1" type="radio" value="4">
+                    <label id="ISI_1_button_text_4__ID" class="rd_btn width_80" for="ISI_1_4__ID">Very</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="formgroup zoom">
+            <div class="questiongroup ">
+              <fieldset class="">
+                <span class="question">2. Difficulty staying asleep:</span>
+                <div class="grid-container-5">
+                  <div>
+                    <input id="ISI_2_0__ID" name="ISI_2" type="radio" value="0" required>
+                    <label id="ISI_2_button_text_0__ID" class="rd_btn width_80" for="ISI_2_0__ID">None</label>
+                  </div>
+                  <div>
+                    <input id="ISI_2_1__ID" name="ISI_2" type="radio" value="1">
+                    <label id="ISI_2_button_text_1__ID" class="rd_btn width_80" for="ISI_2_1__ID">Mild</label>
+                  </div>
+                  <div>
+                    <input id="ISI_2_2__ID" name="ISI_2" type="radio" value="2">
+                    <label id="ISI_2_button_text_2__ID" class="rd_btn width_80" for="ISI_2_2__ID">Moderate</label>
+                  </div>
+                  <div>
+                    <input id="ISI_2_3__ID" name="ISI_2" type="radio" value="3">
+                    <label id="ISI_2_button_text_3__ID" class="rd_btn width_80" for="ISI_2_3__ID">Severe</label>
+                  </div>
+                  <div>
+                    <input id="ISI_2_4__ID" name="ISI_2" type="radio" value="4">
+                    <label id="ISI_2_button_text_4__ID" class="rd_btn width_80" for="ISI_2_4__ID">Very</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="formgroup zoom">
+            <div class="questiongroup ">
+              <fieldset class="">
+                <span class="question">3. Problem waking up too early:</span>
+                <div class="grid-container-5">
+                  <div>
+                    <input id="ISI_3_0__ID" name="ISI_3" type="radio" value="0" required>
+                    <label id="ISI_3_button_text_0__ID" class="rd_btn width_80" for="ISI_3_0__ID">None</label>
+                  </div>
+                  <div>
+                    <input id="ISI_3_1__ID" name="ISI_3" type="radio" value="1">
+                    <label id="ISI_3_button_text_1__ID" class="rd_btn width_80" for="ISI_3_1__ID">Mild</label>
+                  </div>
+                  <div>
+                    <input id="ISI_3_2__ID" name="ISI_3" type="radio" value="2">
+                    <label id="ISI_3_button_text_2__ID" class="rd_btn width_80" for="ISI_3_2__ID">Moderate</label>
+                  </div>
+                  <div>
+                    <input id="ISI_3_3__ID" name="ISI_3" type="radio" value="3">
+                    <label id="ISI_3_button_text_3__ID" class="rd_btn width_80" for="ISI_3_3__ID">Severe</label>
+                  </div>
+                  <div>
+                    <input id="ISI_3_4__ID" name="ISI_3" type="radio" value="4">
+                    <label id="ISI_3_button_text_4__ID" class="rd_btn width_80" for="ISI_3_4__ID">Very</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="formgroup zoom">
+            <div class="questiongroup ">
+              <fieldset class="">
+                <span class="question">4. How satisfied/dissatisfied are you with your current sleep pattern?</span>
+                <div class="grid-container-5">
+                  <div>
+                    <input id="ISI_4_0__ID" name="ISI_4" type="radio" value="0" required>
+                    <label id="ISI_4_button_text_0__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_4_0__ID">Very
+                      satisfied</label>
+                  </div>
+                  <div>
+                    <input id="ISI_4_1__ID" name="ISI_4" type="radio" value="1">
+                    <label id="ISI_4_button_text_1__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_4_1__ID">Satisfied</label>
+                  </div>
+                  <div>
+                    <input id="ISI_4_2__ID" name="ISI_4" type="radio" value="2">
+                    <label id="ISI_4_button_text_2__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_4_2__ID">Neutral</label>
+                  </div>
+                  <div>
+                    <input id="ISI_4_3__ID" name="ISI_4" type="radio" value="3">
+                    <label id="ISI_4_button_text_3__ID" class="rd_btn width_80 rd_btn_two_rows"
+                      for="ISI_4_3__ID">Dissatisfied</label>
+                  </div>
+                  <div>
+                    <input id="ISI_4_4__ID" name="ISI_4" type="radio" value="4">
+                    <label id="ISI_4_button_text_4__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_4_4__ID">Very
+                      Dissatisfied</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="formgroup zoom">
+            <div class="questiongroup ">
+              <fieldset class="">
+                <span class="question">5. To what extent do you consider your sleep problem to interfere with your daily
+                  functioning? <i>e.g. daytime fatigue, ability to function at work/daily chores, concentration, memory,
+                    mood, e.t.c. </i></span>
+                <div class="grid-container-5">
+                  <div>
+                    <input id="ISI_5_0__ID" name="ISI_5" type="radio" value="0" required>
+                    <label id="ISI_5_button_text_0__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_5_0__ID">Not at all
+                      interfering</label>
+                  </div>
+                  <div>
+                    <input id="ISI_5_1__ID" name="ISI_5" type="radio" value="1">
+                    <label id="ISI_5_button_text_1__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_5_1__ID">A little&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                  </div>
+                  <div>
+                    <input id="ISI_5_2__ID" name="ISI_5" type="radio" value="2">
+                    <label id="ISI_5_button_text_2__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_5_2__ID">Somewhat</label>
+                  </div>
+                  <div>
+                    <input id="ISI_5_3__ID" name="ISI_5" type="radio" value="3">
+                    <label id="ISI_5_button_text_3__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_5_3__ID">Much</label>
+                  </div>
+                  <div>
+                    <input id="ISI_5_4__ID" name="ISI_5" type="radio" value="4">
+                    <label id="ISI_5_button_text_4__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_5_4__ID">Very much
+                      interfering </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="formgroup zoom">
+            <div class="questiongroup ">
+              <fieldset class="">
+                <span class="question">6. How noticeable to others do you think your sleeping problem is in terms of
+                  impairing the quality of your life?</span>
+                <div class="grid-container-5">
+                  <div>
+                    <input id="ISI_6_0__ID" name="ISI_6" type="radio" value="0" required>
+                    <label id="ISI_6_button_text_0__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_6_0__ID">Not at all
+                      noticeable </label>
+                  </div>
+                  <div>
+                    <input id="ISI_6_1__ID" name="ISI_6" type="radio" value="1">
+                    <label id="ISI_6_button_text_1__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_6_1__ID">A little</label>
+                  </div>
+                  <div>
+                    <input id="ISI_6_2__ID" name="ISI_6" type="radio" value="2">
+                    <label id="ISI_6_button_text_2__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_6_2__ID">Somewhat</label>
+                  </div>
+                  <div>
+                    <input id="ISI_6_3__ID" name="ISI_6" type="radio" value="3">
+                    <label id="ISI_6_button_text_3__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_6_3__ID">Much</label>
+                  </div>
+                  <div>
+                    <input id="ISI_6_4__ID" name="ISI_6" type="radio" value="4">
+                    <label id="ISI_6_button_text_4__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_6_4__ID">Very much
+                      noticeable</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="formgroup zoom">
+            <div class="questiongroup ">
+              <fieldset class="">
+                <span class="question">7. How worried/distressed are you about your current sleep problem?</span>
+                <div class="grid-container-5">
+                  <div>
+                    <input id="ISI_7_0__ID" name="ISI_7" type="radio" value="0" required>
+                    <label id="ISI_7_button_text_0__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_7_0__ID">Not at all
+                      worried</label>
+                  </div>
+                  <div>
+                    <input id="ISI_7_1__ID" name="ISI_7" type="radio" value="1">
+                    <label id="ISI_7_button_text_1__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_7_1__ID">A little</label>
+                  </div>
+                  <div>
+                    <input id="ISI_7_2__ID" name="ISI_7" type="radio" value="2">
+                    <label id="ISI_7_button_text_2__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_7_2__ID">Somewhat</label>
+                  </div>
+                  <div>
+                    <input id="ISI_7_3__ID" name="ISI_7" type="radio" value="3">
+                    <label id="ISI_7_button_text_3__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_7_3__ID">Much</label>
+                  </div>
+                  <div>
+                    <input id="ISI_7_4__ID" name="ISI_7" type="radio" value="4">
+                    <label id="ISI_7_button_text_4__ID" class="rd_btn width_80 rd_btn_two_rows" for="ISI_7_4__ID">Very much
+                      worried</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div style="display:xnone"><input name="ISI" type="number"></div>
+          </div>
+          <div class="formgroup right" id="S4_check__ID" style="display:xnone">
+            <span >Please answer all questions</span>
+          </div>
+          <div class="formgroup submit_dual_btn">
+            <button type="button" d=-1 class="submit_btn">Previous</button>
+            <button type="submit" d=1 class="submit_btn">Next</button>
+          </div>
+        </div>
+        <div id=S5__ID>
+          <div class="formgroup zoom">
+            <span class="question"></span>
+            <fieldset class="grid-container-1">
+              <div class="">
+                <label><span class="question">15. Are you a very heavy snorer or has your bed partner mentioned that you
+                    are a heavy snorer?</span></label><br>
+                <input id="snore_1__ID" name="snore" type="radio" value="0" required>
+                <label class="rd_btn" for="snore_1__ID">Yes</label>
+                <input id="snore_2__ID" name="snore" type="radio" value="1">
+                <label class="rd_btn" for="snore_2__ID">No</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="formgroup zoom">
+            <span class="question"></span>
+            <fieldset class="grid-container-1">
+              <div class="">
+                <label><span class="question">16. Do you have difficulty with breathing during sleep OR staying awake
+                    during the day? </span></label><br>
+                <input id="breathing_difficulty_1__ID" name="breathing_difficulty" type="radio" value="0" required>
+                <label class="rd_btn" for="breathing_difficulty_1__ID">Yes</label>
+                <input id="breathing_difficulty_2__ID" name="breathing_difficulty" type="radio" value="1">
+                <label class="rd_btn" for="breathing_difficulty_2__ID">No</label>
+              </div>
+            </fieldset>
+          </div>
+          <div id="S5_17__ID">
+            <div class="formgroup">
+              <fieldset class="">
+                <span class="question">
+                  <p>Instructions</p>
+                </span>
+                <span>How likely are you to doze or fall asleep in the following situations, in contrast to just feeling
+                  tired? This refers to your usual way of life in recent times. Even if you have not done some of these
+                  things recently, try to work out how they would have affected you.</span>
+              </fieldset>
+            </div>
+            <div class="formgroup zoom">
+              <div class="questiongroup ">
+                <fieldset class="">
+                  <span class="question">1. Sitting and reading</span>
+                  <div class="grid-container-4">
+                    <div>
+                      <input id="ESS_1_0__ID" name="ESS_1" type="radio" value="0" required>
+                      <label id="ESS_1_button_text_0__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_1_0__ID">Would <b>NEVER</b>
+                        doze
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_1_1__ID" name="ESS_1" type="radio" value="1">
+                      <label id="ESS_1_button_text_1__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_1_1__ID"><b>SLIGHT</b>
+                        chance of dozing
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_1_2__ID" name="ESS_1" type="radio" value="2">
+                      <label id="ESS_1_button_text_2__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_1_2__ID"><b>MODERATE</b>
+                        chance of dozing
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_1_3__ID" name="ESS_1" type="radio" value="3">
+                      <label id="ESS_1_button_text_3__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_1_3__ID"><b>HIGH</b> chance
+                        of dozing
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="formgroup zoom">
+              <div class="questiongroup ">
+                <fieldset class="">
+                  <span class="question">2. Watching TV</span>
+                  <div class="grid-container-4">
+                    <div>
+                      <input id="ESS_2_0__ID" name="ESS_2" type="radio" value="0" required>
+                      <label id="ESS_2_button_text_0__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_2_0__ID">Would <b>NEVER</b>
+                        doze
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_2_1__ID" name="ESS_2" type="radio" value="1">
+                      <label id="ESS_2_button_text_1__ID" class="rd_btn  width_80 rd_btn_two_rows"
+                        for="ESS_2_1__ID"><b>SLIGHT</b> chance of dozing
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_2_2__ID" name="ESS_2" type="radio" value="2">
+                      <label id="ESS_2_button_text_2__ID" class="rd_btn  width_80 rd_btn_two_rows"
+                        for="ESS_2_2__ID"><b>MODERATE</b> chance of dozing
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_2_3__ID" name="ESS_2" type="radio" value="3">
+                      <label id="ESS_2_button_text_3__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_2_3__ID"><b>HIGH</b> chance
+                        of dozing
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="formgroup zoom">
+              <div class="questiongroup ">
+                <fieldset class="">
+                  <span class="question">3. Sitting, inactive in a public place (eg a theatre or a meeting)</span>
+                  <div class="grid-container-4">
+                    <div>
+                      <input id="ESS_3_0__ID" name="ESS_3" type="radio" value="0" required>
+                      <label id="ESS_3_button_text_0__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_3_0__ID">Would
+                        <b>NEVER</b> doze
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_3_1__ID" name="ESS_3" type="radio" value="1">
+                      <label id="ESS_3_button_text_1__ID" class="rd_btn  width_80 rd_btn_two_rows"
+                        for="ESS_3_1__ID"><b>SLIGHT</b> chance of dozing
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_3_2__ID" name="ESS_3" type="radio" value="2">
+                      <label id="ESS_3_button_text_2__ID" class="rd_btn  width_80 rd_btn_two_rows"
+                        for="ESS_3_2__ID"><b>MODERATE</b> chance of dozing
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_3_3__ID" name="ESS_3" type="radio" value="3">
+                      <label id="ESS_3_button_text_3__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_3_3__ID"><b>HIGH</b> chance
+                        of dozing
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="formgroup zoom">
+              <div class="questiongroup ">
+                <fieldset class="">
+                  <span class="question">4. As a passenger in a car for an hour without a break</span>
+                  <div class="grid-container-4">
+                    <div>
+                      <input id="ESS_4_0__ID" name="ESS_4" type="radio" value="0" required>
+                      <label id="ESS_4_button_text_0__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_4_0__ID">Would
+                        <b>NEVER</b> doze
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_4_1__ID" name="ESS_4" type="radio" value="1">
+                      <label id="ESS_4_button_text_1__ID" class="rd_btn  width_80 rd_btn_two_rows"
+                        for="ESS_4_1__ID"><b>SLIGHT</b> chance of dozing
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_4_2__ID" name="ESS_4" type="radio" value="2">
+                      <label id="ESS_4_button_text_2__ID" class="rd_btn  width_80 rd_btn_two_rows"
+                        for="ESS_4_2__ID"><b>MODERATE</b> chance of dozing
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_4_3__ID" name="ESS_4" type="radio" value="3">
+                      <label id="ESS_4_button_text_3__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_4_3__ID"><b>HIGH</b> chance
+                        of dozing
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="formgroup zoom">
+              <div class="questiongroup ">
+                <fieldset class="">
+                  <span class="question">5. Lying down to rest in the afternoon when circumstances permit</span>
+                  <div class="grid-container-4">
+                    <div>
+                      <input id="ESS_5_0__ID" name="ESS_5" type="radio" value="0" required>
+                      <label id="ESS_5_button_text_0__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_5_0__ID">Would
+                        <b>NEVER</b> doze
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_5_1__ID" name="ESS_5" type="radio" value="1">
+                      <label id="ESS_5_button_text_1__ID" class="rd_btn  width_80 rd_btn_two_rows"
+                        for="ESS_5_1__ID"><b>SLIGHT</b> chance of dozing
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_5_2__ID" name="ESS_5" type="radio" value="2">
+                      <label id="ESS_5_button_text_2__ID" class="rd_btn  width_80 rd_btn_two_rows"
+                        for="ESS_5_2__ID"><b>MODERATE</b> chance of dozing
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_5_3__ID" name="ESS_5" type="radio" value="3">
+                      <label id="ESS_5_button_text_3__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_5_3__ID"><b>HIGH</b> chance
+                        of dozing
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="formgroup zoom">
+              <div class="questiongroup ">
+                <fieldset class="">
+                  <span class="question">6. Sitting and talking to someone</span>
+                  <div class="grid-container-4">
+                    <div>
+                      <input id="ESS_6_0__ID" name="ESS_6" type="radio" value="0" required>
+                      <label id="ESS_6_button_text_0__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_6_0__ID">Would
+                        <b>NEVER</b> doze
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_6_1__ID" name="ESS_6" type="radio" value="1">
+                      <label id="ESS_6_button_text_1__ID" class="rd_btn  width_80 rd_btn_two_rows"
+                        for="ESS_6_1__ID"><b>SLIGHT</b> chance of dozing
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_6_2__ID" name="ESS_6" type="radio" value="2">
+                      <label id="ESS_6_button_text_2__ID" class="rd_btn  width_80 rd_btn_two_rows"
+                        for="ESS_6_2__ID"><b>MODERATE</b> chance of dozing
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_6_3__ID" name="ESS_6" type="radio" value="3">
+                      <label id="ESS_6_button_text_3__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_6_3__ID"><b>HIGH</b> chance
+                        of dozing
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="formgroup zoom">
+              <div class="questiongroup ">
+                <fieldset class="">
+                  <span class="question">7. Sitting quietly after lunch without alcohol</span>
+                  <div class="grid-container-4">
+                    <div>
+                      <input id="ESS_7_0__ID" name="ESS_7" type="radio" value="0" required>
+                      <label id="ESS_7_button_text_0__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_7_0__ID">Would
+                        <b>NEVER</b> doze
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_7_1__ID" name="ESS_7" type="radio" value="1">
+                      <label id="ESS_7_button_text_1__ID" class="rd_btn  width_80 rd_btn_two_rows"
+                        for="ESS_7_1__ID"><b>SLIGHT</b> chance of dozing
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_7_2__ID" name="ESS_7" type="radio" value="2">
+                      <label id="ESS_7_button_text_2__ID" class="rd_btn  width_80 rd_btn_two_rows"
+                        for="ESS_7_2__ID"><b>MODERATE</b> chance of dozing
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_7_3__ID" name="ESS_7" type="radio" value="3">
+                      <label id="ESS_7_button_text_3__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_7_3__ID"><b>HIGH</b> chance
+                        of dozing
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div class="formgroup zoom">
+              <div class="questiongroup ">
+                <fieldset class="">
+                  <span class="question">8. In a car, while stopped for a few minutes in traffic</span>
+                  <div class="grid-container-4">
+                    <div>
+                      <input id="ESS_8_0__ID" name="ESS_8" type="radio" value="0" required>
+                      <label id="ESS_8_button_text_0__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_8_0__ID">Would
+                        <b>NEVER</b> doze
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_8_1__ID" name="ESS_8" type="radio" value="1">
+                      <label id="ESS_8_button_text_1__ID" class="rd_btn  width_80 rd_btn_two_rows"
+                        for="ESS_8_1__ID"><b>SLIGHT</b> chance of dozing
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_8_2__ID" name="ESS_8" type="radio" value="2">
+                      <label id="ESS_8_button_text_2__ID" class="rd_btn  width_80 rd_btn_two_rows"
+                        for="ESS_8_2__ID"><b>MODERATE</b> chance of dozing
+                      </label>
+                    </div>
+                    <div>
+                      <input id="ESS_8_3__ID" name="ESS_8" type="radio" value="3">
+                      <label id="ESS_8_button_text_3__ID" class="rd_btn  width_80 rd_btn_two_rows" for="ESS_8_3__ID"><b>HIGH</b> chance
+                        of dozing
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+     
+            <div style="display:xnone"><input name="ESS" type="number"></div>
+          </div>
+          <div class="formgroup right" id="S5_check__ID" style="display:xnone">
+            <span >Please answer all questions</span>
+          </div>
+          <div class="formgroup submit_dual_btn">
+            <button type="button" d=-1 class="submit_btn">Previous</button>
+            <button type="submit" d=1 class="submit_btn">Submit</button>
+          </div>  
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    function F__ID() {
+      //VmInclude: '__HOST__/assets/js/form.01.js'
+      //---------------------------------------
+      var N = 5;
+      var current_I = 1;
+      var contact_ready = false;
+      var notelig = 0;
+      //---------------------------------------
+      captcha_func = function () {
+        $vm.request({ api: m.api, cmd: 'captcha' }, function (res) {
+          $('#F__ID input[name=_captcha_hash]').val(res.result.hash);
+          $('#F__ID input[name=_captcha_time]').val(res.result.time);
+          $('#captcha_img__ID').prop("src", res.result.img);
+        })
+      };
+      //---------------------------------------
+      //m.before_submit = function (data, index) {
+      //return true;
+      //}
+      //---------------------------------------
+      $('#D__ID').on('load', function () {
+        notelig = 0;
+
+        if ($("#F__ID input[name=time_diff]:checked").val() == '0') {
+          $('#S3_8a__ID').show();
+          $('#F__ID input[name=jetlag]').prop('required', 'true');
+        }
+        else {
+          $('#S3_8a__ID').hide();
+          $('#F__ID input[name=jetlag]').removeAttr('required');
+        }
+
+        if ($("#F__ID input[name=breathing_difficulty]:checked").val() == '0' || $("#F__ID input[name=snore]:checked").val() == '0') {
+          $('#S5_17__ID').show();
+          $('#F__ID input[name=ESS_1]').prop('required', 'true');
+          $('#F__ID input[name=ESS_2]').prop('required', 'true');
+          $('#F__ID input[name=ESS_3]').prop('required', 'true');
+          $('#F__ID input[name=ESS_4]').prop('required', 'true');
+          $('#F__ID input[name=ESS_5]').prop('required', 'true');
+          $('#F__ID input[name=ESS_6]').prop('required', 'true');
+          $('#F__ID input[name=ESS_7]').prop('required', 'true');
+          $('#F__ID input[name=ESS_8]').prop('required', 'true');
+        }
+        else {
+          $('#S5_17__ID').hide();
+          $('#F__ID input[name=ESS_1]').removeAttr('required');
+          $('#F__ID input[name=ESS_2]').removeAttr('required');
+          $('#F__ID input[name=ESS_3]').removeAttr('required');
+          $('#F__ID input[name=ESS_4]').removeAttr('required');
+          $('#F__ID input[name=ESS_5]').removeAttr('required');
+          $('#F__ID input[name=ESS_6]').removeAttr('required');
+          $('#F__ID input[name=ESS_7]').removeAttr('required');
+          $('#F__ID input[name=ESS_8]').removeAttr('required');
+        }
+
+        show_section(1);
+        //console.log(JSON.stringify(m))
+      });
+      //---------------------------------------
+      $("#F__ID input[name=time_diff]").on('change', function () {
+        if ($("#F__ID input[name=time_diff]:checked").val() == '0') {
+          $('#S3_8a__ID').show();
+          $('#F__ID input[name=jetlag]').prop('required', 'true');
+        }
+        else {
+          $('#S3_8a__ID').hide();
+          $('#F__ID input[name=jetlag]').removeAttr('required');
+        }
+      });
+      $("#F__ID input[name=breathing_difficulty]").on('change', function () {
+        if ($("#F__ID input[name=breathing_difficulty]:checked").val() == '0' || $("#F__ID input[name=snore]:checked").val() == '0') {
+          $('#S5_17__ID').show();
+          $('#F__ID input[name=ESS_1]').prop('required', 'true');
+          $('#F__ID input[name=ESS_2]').prop('required', 'true');
+          $('#F__ID input[name=ESS_3]').prop('required', 'true');
+          $('#F__ID input[name=ESS_4]').prop('required', 'true');
+          $('#F__ID input[name=ESS_5]').prop('required', 'true');
+          $('#F__ID input[name=ESS_6]').prop('required', 'true');
+          $('#F__ID input[name=ESS_7]').prop('required', 'true');
+          $('#F__ID input[name=ESS_8]').prop('required', 'true');
+        }
+        else {
+          $('#S5_17__ID').hide();
+          $('#F__ID input[name=ESS_1]').removeAttr('required');
+          $('#F__ID input[name=ESS_2]').removeAttr('required');
+          $('#F__ID input[name=ESS_3]').removeAttr('required');
+          $('#F__ID input[name=ESS_4]').removeAttr('required');
+          $('#F__ID input[name=ESS_5]').removeAttr('required');
+          $('#F__ID input[name=ESS_6]').removeAttr('required');
+          $('#F__ID input[name=ESS_7]').removeAttr('required');
+          $('#F__ID input[name=ESS_8]').removeAttr('required');
+        }
+      });
+      $("#F__ID input[name=snore]").on('change', function () {
+        if ($("#F__ID input[name=snore]:checked").val() == '0' || $("#F__ID input[name=breathing_difficulty]:checked").val() == '0' ) {
+          $('#S5_17__ID').show();
+          $('#F__ID input[name=ESS_1]').prop('required', 'true');
+          $('#F__ID input[name=ESS_2]').prop('required', 'true');
+          $('#F__ID input[name=ESS_3]').prop('required', 'true');
+          $('#F__ID input[name=ESS_4]').prop('required', 'true');
+          $('#F__ID input[name=ESS_5]').prop('required', 'true');
+          $('#F__ID input[name=ESS_6]').prop('required', 'true');
+          $('#F__ID input[name=ESS_7]').prop('required', 'true');
+          $('#F__ID input[name=ESS_8]').prop('required', 'true');
+        }
+        else {
+          $('#S5_17__ID').hide();
+          $('#F__ID input[name=ESS_1]').removeAttr('required');
+          $('#F__ID input[name=ESS_2]').removeAttr('required');
+          $('#F__ID input[name=ESS_3]').removeAttr('required');
+          $('#F__ID input[name=ESS_4]').removeAttr('required');
+          $('#F__ID input[name=ESS_5]').removeAttr('required');
+          $('#F__ID input[name=ESS_6]').removeAttr('required');
+          $('#F__ID input[name=ESS_7]').removeAttr('required');
+          $('#F__ID input[name=ESS_8]').removeAttr('required');
+        }
+      });
+      //---------------------------------------
+      var scores={};
+      var calc_scores=function(){
+        //console.log("CALC SCORES")
+        //ISI-------------------
+        scores.ISI=(
+            parseInt($("input[name='ISI_7']:checked").val())+
+            parseInt($("input[name='ISI_6']:checked").val())+
+            parseInt($("input[name='ISI_5']:checked").val())+
+            parseInt($("input[name='ISI_4']:checked").val())+
+            parseInt($("input[name='ISI_3']:checked").val())+
+            parseInt($("input[name='ISI_2']:checked").val())+
+            parseInt($("input[name='ISI_1']:checked").val())
+            ).toString();
+
+            scores.ESS=(
+            parseInt($("input[name='ESS_8']:checked").val())+
+            parseInt($("input[name='ESS_7']:checked").val())+
+            parseInt($("input[name='ESS_6']:checked").val())+
+            parseInt($("input[name='ESS_5']:checked").val())+
+            parseInt($("input[name='ESS_4']:checked").val())+
+            parseInt($("input[name='ESS_3']:checked").val())+
+            parseInt($("input[name='ESS_2']:checked").val())+
+            parseInt($("input[name='ESS_1']:checked").val())
+            ).toString();
+      }
+      //---------------------------------------
+      $('#F__ID button').on('click', function (event) {
+        console.log(current_I)
+        $('#S' + current_I + "_check__ID").show();
+        var d = $(this).attr("d");
+        d = parseInt(d);
+        if (d < 0) show_section(current_I - 1);
+        else {
+          if (notelig > 0) {
+            $('#F__ID *').removeAttr('disabled');
+            old_submit(event);
+          }
+          //do nothing, m.submit will handle  
+        }
+      })
+      //---------------------------------------
+      var show_section = function (I) {
+        //console.log("Show")
+        for (var i = 1; i <= N; i++) {
+          $('#S' + i + "__ID").hide(); // remove/add '//' for Test mode/Production mode 
+          $('#S' + i + "__ID * ").attr('disabled', 'disabled');
+        }
+        if (I < 1) { I = 1; $('#S' + I + '__ID').show(); }
+        if (I >= N) I = N;
+        $('#S' + I + '__ID').show();
+        $('#S' + I + "__ID * ").removeAttr('disabled');
+        if(I!=current_I) $('#S' + current_I + "_check__ID").hide();
+        current_I = I;
+        $(window).scrollTop(0);
+      }
+      //-------------------------------------
+      $('#mobileNumber__ID').on('change', function () {
+        var mn = $('#mobileNumber__ID').val();
+        if (mn.length == 10) {
+          $('#mobileNumber__ID').val(mn.substring(0, 4) + '-' + mn.substring(4, 7) + '-' + mn.substring(7, 10))
+        }
+      })
+      //---------------------------------------
+      var old_submit = m.submit;
+      m.submit = function (event) {
+        event.preventDefault();
+        //console.log("Submit")
+        if (current_I == 1) {
+          if ($("input[name='LBP_3_month']:checked").val() == '1' ||
+            $("input[name='pain']:checked").val() == '0' ||
+            $("input[name='Diagnosis']:checked").val() == '3' ||
+            $("input[name='Diagnosis']:checked").val() == '4') {
+            notelig = current_I;
+            $('#F__ID *').removeAttr('disabled');
+            old_submit(event);
+          }
+        }
+        if (current_I == 2) {
+          if ($("input[name='English']:checked").val() == '1' ||
+            $("input[name='Smartphone']:checked").val() == '1' ||
+            $("input[name='Shft_wrk']:checked").val() == '1' ||
+            $("input[name='Shft_wrk']:checked").val() == '3' ||
+            ($("input[name='time_diff']:checked").val() == '0' && $("input[name='jetlag']:checked").val() == '0')) {
+            notelig = current_I;
+            $('#F__ID *').removeAttr('disabled');
+            old_submit(event);
+          }
+        }
+        if (current_I == 3) {
+          if ($("input[name='Psych']:checked").val() == '0' ||
+            $("input[name='sleep_disorder']:checked").val() == '0' ||
+            $("input[name='breathing_difficulty']:checked").val() == '0' ||
+            $("input[name='trpy_dev']:checked").val() == '0' ||
+            $("input[name='CBT']:checked").val() == '0' ||
+            $("input[name='driving_job']:checked").val() == '0') {
+            notelig = current_I;
+            $('#F__ID *').removeAttr('disabled');
+            old_submit(event);
+          }
+        }
+        if (current_I == 4) {
+          calc_scores();
+          if (scores.ISI< 11) {
+            notelig = current_I;
+            $('#F__ID *').removeAttr('disabled');
+            $('#F__ID input[name=ISI]').val(scores.ISI);
+            old_submit(event);
+          }
+        }
+        if (current_I == 5) {
+          calc_scores();
+          if (scores.ESS > 10) {
+            notelig = current_I;
+            $('#F__ID *').removeAttr('disabled');
+            $('#F__ID input[name=ESS]').val(scores.ESS);
+            old_submit(event);
+          }
+          else{
+            $('#F__ID *').removeAttr('disabled');
+            $('#F__ID input[name=ESS]').val(scores.ESS);
+            $('#F__ID input[name=ISI]').val(scores.ISI);
+            old_submit(event);
+          }
+        }
+        show_section(current_I+1);
+      }
+      //--------------------------------
+      m.after_insert = function (data, res) {
+        //console.log(JSON.stringify(res) + " - "+notelig)
+        if (notelig > 0 ) {
+          if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
+          else $vm.load_module(m.prefix + 'not_elig1', '', {});
+        }
+        else {
+          if (m.prefix == undefined) { $vm.load_module('contact-form', '', {}); }
+          else $vm.load_module(m.prefix + 'contact-form', '', { disturb_sleep: data.sleep_dist });
+        }
+      }
+    }
+  </script>
+  <style>
+    /*VmInclude:__HOST__/assets/css/wapp-form.css*/
+  </style>
+</div>
+</body>
+</html>

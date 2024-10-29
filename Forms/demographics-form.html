@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wappsystem-form.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID>
+
+    <!--third html start -->
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id="F__ID">
+                            <h3 id=title__ID></h3>
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID">
+                                <div class="form-group">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Participant</span>
+                                            <input type=text name="Participant" class=form-control id=Participant__ID
+                                                data-id="Participant" />
+                                        </label><br>
+                                        <label><span class="">Participant ID</span>
+                                            <input type=text name="Participant_uid" class=form-control readonly />
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <label><span class="">What is your date of birth?</span></label>
+                                        <fieldset class="pl-4">
+                                        <label><span class=""></span>
+                                            <input type="date" name="DOB" class="form-control" placeholder="" required>
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <label><span class="">BMI</span></label>
+                                        <fieldset class="pl-4">
+                                        <label><span class=""></span>
+                                            <input type="number" name="BMI" step=0.1 class="form-control" placeholder="">
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <label><span class="">What is your biological gender?</span></label>
+                                    <fieldset class="pl-4">
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="gender" value="Male" required>
+                                            <span class="checkmark"></span> Male</label>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="gender" value="Female">
+                                            <span class="checkmark"></span> Female </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <label><span class="">What is your postcode?</span></label>
+                                        <fieldset class="pl-4">
+                                        <label><span class=""></span>
+                                            <input type="number" max="9999" min="1000" name="postcode" class="form-control" placeholder="" required>
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <label><span class="">What is your current employment status?</span></label>
+                                    <fieldset class="pl-4">
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="employment" value="full-time" required>
+                                            <span class="checkmark"></span>Employed full-time (40+ hours/week) 
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="employment" value="part-time">
+                                            <span class="checkmark"></span>Employed part-time (&lt;40 hours/week)  
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="employment" value="unemployed">
+                                            <span class="checkmark"></span>Unemployed (currently looking for work) 
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="employment" value="unemployed_not">
+                                            <span class="checkmark"></span>Unemployed (currently not looking for work) 
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="employment" value="retired" >
+                                            <span class="checkmark"></span>Retired
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="employment" value="unable">
+                                            <span class="checkmark"></span>Unable to work 
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <label><span class="">Occupation</span></label>
+                                        <fieldset class="pl-4">
+                                        <label><span class=""></span>
+                                            <input type="text" name="Occupation" class="form-control" placeholder="">
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <label><span class="">What is your highest level of education?</span></label>
+                                    <fieldset class="pl-4">
+                                        <label class="radiobuttons">Primary or Secondary school (e.g. 8th grade or less)
+                                            <input type="radio" name="education" value="y8-" required>
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                        <label class="radiobuttons">Some High School, but did not graduate 
+                                            <input type="radio" name="education" value="y8+">
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                        <label class="radiobuttons">High school graduate or HSC
+                                            <input type="radio" name="education" value="high-school">
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                        <label class="radiobuttons">TAFE graduate (e.g. Certificate, Diploma)
+                                            <input type="radio" name="education" value="vocational">
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                        <label class="radiobuttons">University graduate (e.g. Bachelor’s degree)
+                                            <input type="radio" name="education" value="bachelor">
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                        <label class="radiobuttons">Postgraduate university degree (e.g. Masters, PhD)
+                                            <input type="radio" name="education" value="postgraduate">
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <label>Do you use a language other than English at home (tick the boxes)</label>
+                                    <fieldset class="pl-4">
+                                        <label class="checkboxes">
+                                            <input type="checkbox" name="English">
+                                            <span class="check_checkmark"></span> No, English only
+                                        </label><br>
+                                        <label class="checkboxes">
+                                            <input type="checkbox" name="Mandarin">
+                                            <span class="check_checkmark"></span> Yes, Mandarin
+                                        </label><br>
+                                        <label class="checkboxes">
+                                            <input type="checkbox" name="Arabic">
+                                            <span class="check_checkmark"></span> Yes, Arabic
+                                        </label><br>
+                                        <label class="checkboxes">
+                                            <input type="checkbox" name="Cantonese">
+                                            <span class="check_checkmark"></span> Yes, Cantonese
+                                        </label><br>
+                                        <label class="checkboxes">
+                                            <input type="checkbox" name="Vietnamese">
+                                            <span class="check_checkmark"></span> Yes, Vietnamese
+                                        </label><br>
+                                        <label class="checkboxes">
+                                            <input type="checkbox" name="Italian">
+                                            <span class="check_checkmark"></span> Yes, Italian
+                                        </label><br>
+                                        <label class="checkboxes">
+                                            <input type="checkbox" name="Greek">
+                                            <span class="check_checkmark"></span> Yes, Greek
+                                        </label><br>
+                                        <label class="checkboxes">
+                                            <input type="checkbox" name="Other">
+                                            <span class="check_checkmark"></span> Yes, other language
+                                        </label><br>
+                                        <label><span>If other language, please specify</span>
+                                            <input class="form-control" type="text" name="Language_other">
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup ">
+                                    <label><span>Where were you born? </span></label>
+                                    <fieldset  class="pl-4">
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="born" value="1">
+                                            <span class="checkmark"></span>Australia
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="born" value="2">
+                                            <span class="checkmark"></span>England
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="born" value="3">
+                                            <span class="checkmark"></span>New Zealand
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="born" value="4">
+                                            <span class="checkmark"></span>India
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="born" value="5">
+                                            <span class="checkmark"></span>Philippines
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="born" value="6">
+                                            <span class="checkmark"></span>Vietnam
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="born" value="7">
+                                            <span class="checkmark"></span>Italy
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="born" value="8">
+                                            <span class="checkmark"></span>Other
+                                        </label><br>
+                                        <label><span>If other, please specify</span>
+                                            <input class="form-control" type="text" name="born_other">
+                                        </label>
+
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <label><span>Are you of Aboriginal or Torres Strait Islander descent?
+                                        </span></label>
+                                    <fieldset  class="pl-4">
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="atsi" value="1">
+                                            <span class="checkmark"></span>No
+                                        </label>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="atsi" value="2">
+                                            <span class="checkmark"></span>Yes, Aboriginal
+                                        </label>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="atsi" value="3">
+                                            <span class="checkmark"></span>Yes, Torres Strait Islander&nbsp;
+                                            </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <label><span class="">Standard drinks per week</span></label>
+                                        <fieldset class="pl-4">
+                                        <label><span class=""></span>
+                                            <input type="text" name="Standard_drinks" class="form-control" placeholder="">
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Cannabis naivety (lifetime use)</span>
+                                            <select name="Cannabis_naivety" class=form-control>
+                                                <option></option>
+                                                <option>Never</option>
+                                                <option>Less than 10</option>
+                                                <option>More than 10</option>
+                                                <option>More than 100</option>
+                                            </select>
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="" style="text-align:right">
+                                <div class="">
+                                    <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function F__ID() {
+            VmInclude:'__COMPONENT__/f/form.01.js'
+            VmInclude:__CURRENT_PATH__/shared-form.js
+            //-------------------------------------
+        }
+    </script>
+    <style>
+        #submit_box__ID {
+            text-align: right;
+        }
+        /*VmInclude:__CURRENT_PATH__/wappsystem-form.css*/
+    </style>
+</div>

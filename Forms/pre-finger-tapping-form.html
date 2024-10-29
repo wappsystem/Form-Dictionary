@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wappsystem-form.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID>
+    <!--third html start -->
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id="F__ID">
+                            <h3 id="title__ID"></h3>
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID">
+                                <div class="form-group">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Participant</span>
+                                            <input type=text name="Participant" class=form-control id=Participant__ID
+                                                data-id="Participant" />
+                                        </label><br>
+                                        <label><span class="">Participant ID</span>
+                                            <input type=text name="Participant_uid" class=form-control readonly />
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+							<div class="form-group">
+								<div class="questiongroup ">
+									<fieldset class=""><label></label>
+										<div class=row>
+											<div class="col-sm-2"><label><span class="">Correct_1</span><input class=form-control name=Correct_1></label></div>
+											<div class="col-sm-2"><label><span class="">Correct_2</span><input class=form-control name=Correct_2></label></div>
+											<div class="col-sm-2"><label><span class="">Correct_3</span><input class=form-control name=Correct_3></label></div>
+											<div class="col-sm-2"><label><span class="">Correct_4</span><input class=form-control name=Correct_4></label></div>
+											<div class="col-sm-2"><label><span class="">Correct_5</span><input class=form-control name=Correct_5></label></div>
+											<div class="col-sm-2"><label><span class="">Correct_6</span><input class=form-control name=Correct_6></label></div>
+										</div>
+										<div class="row">
+											<div class="col-sm-2"><label><span class="">Correct_7</span><input class=form-control name=Correct_7></label></div>
+											<div class="col-sm-2"><label><span class="">Correct_8</span><input class=form-control name=Correct_8></label></div>
+											<div class="col-sm-2"><label><span class="">Correct_9</span><input class=form-control name=Correct_9></label></div>
+											<div class="col-sm-2"><label><span class="">Correct_10</span><input class=form-control name=Correct_10></label></div>
+											<div class="col-sm-2"><label><span class="">Correct_11</span><input class=form-control name=Correct_11></label></div>
+											<div class="col-sm-2"><label><span class="">Correct_12</span><input class=form-control name=Correct_12></label></div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="questiongroup ">
+									<fieldset class=""><label></label>
+										<div class=row>
+											<div class="col-sm-2"><label><span class="">Error_1</span><input class=form-control name=Error_1></label></div>
+											<div class="col-sm-2"><label><span class="">Error_2</span><input class=form-control name=Error_2></label></div>
+											<div class="col-sm-2"><label><span class="">Error_3</span><input class=form-control name=Error_3></label></div>
+											<div class="col-sm-2"><label><span class="">Error_4</span><input class=form-control name=Error_4></label></div>
+											<div class="col-sm-2"><label><span class="">Error_5</span><input class=form-control name=Error_5></label></div>
+											<div class="col-sm-2"><label><span class="">Error_6</span><input class=form-control name=Error_6></label></div>
+										</div>
+										<div class=row>
+											<div class="col-sm-2"><label><span class="">Error_7</span><input class=form-control name=Error_7></label></div>
+											<div class="col-sm-2"><label><span class="">Error_8</span><input class=form-control name=Error_8></label></div>
+											<div class="col-sm-2"><label><span class="">Error_9</span><input class=form-control name=Error_9></label></div>
+											<div class="col-sm-2"><label><span class="">Error_10</span><input class=form-control name=Error_10></label></div>
+											<div class="col-sm-2"><label><span class="">Error_11</span><input class=form-control name=Error_11></label></div>
+											<div class="col-sm-2"><label><span class="">Error_12</span><input class=form-control name=Error_12></label></div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="questiongroup ">
+									<fieldset class=""><label></label>
+										<div class=row>
+											<div class="col-sm-2"><label><span class="">Time_1</span><input class=form-control name=Time_1></label></div>
+											<div class="col-sm-2"><label><span class="">Time_2</span><input class=form-control name=Time_2></label></div>
+											<div class="col-sm-2"><label><span class="">Time_3</span><input class=form-control name=Time_3></label></div>
+											<div class="col-sm-2"><label><span class="">Time_4</span><input class=form-control name=Time_4></label></div>
+											<div class="col-sm-2"><label><span class="">Time_5</span><input class=form-control name=Time_5></label></div>
+											<div class="col-sm-2"><label><span class="">Time_6</span><input class=form-control name=Time_6></label></div>
+										</div>
+										<div class=row>
+											<div class="col-sm-2"><label><span class="">Time_7</span><input class=form-control name=Time_7></label></div>
+											<div class="col-sm-2"><label><span class="">Time_8</span><input class=form-control name=Time_8></label></div>
+											<div class="col-sm-2"><label><span class="">Time_9</span><input class=form-control name=Time_9></label></div>
+											<div class="col-sm-2"><label><span class="">Time_10</span><input class=form-control name=Time_10></label></div>
+											<div class="col-sm-2"><label><span class="">Time_11</span><input class=form-control name=Time_11></label></div>
+											<div class="col-sm-2"><label><span class="">Time_12</span><input class=form-control name=Time_12></label></div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="questiongroup ">
+									<fieldset class=""><label></label>
+										<div class=row>
+											<div class="col-sm-2"><label><span class="">PreTLS</span><input class=form-control name=PreTLS></label></div>
+											<div class="col-sm-2"><label><span class="">PoTLS</span><input class=form-control name=PoTLS></label></div>
+											<div class="col-sm-2"><label><span class="">PreTES</span><input class=form-control name=PreTES></label></div>
+											<div class="col-sm-2"><label><span class="">PoTES</span><input class=form-control name=PoTES></label></div>
+											<div class="col-sm-2"><label><span class="">PreTRT</span><input class=form-control name=PreTRT></label></div>
+											<div class="col-sm-2"><label><span class="">PoTRT</span><input class=form-control name=PoTRT></label></div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							<div class="form-group" style="display:xnone">
+								<div class="questiongroup ">
+									<fieldset class=""><label></label>
+										<div class=row>
+											<div class="col-sm-4"><label><span class="">Tapping_Time</span><input class=form-control name=Tapping_Time></label></div>
+											<div class="col-sm-4"><label><span class="">Match</span><input class=form-control name=Match></label></div>
+											<div class="col-sm-4"><label><span class="">Sequence_Number</span><input class=form-control name=Sequence_Number></label></div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							<button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script>
+	function F__ID(){
+		// Ver. 17/10/2019
+		//-------------------------------------
+		//VmInclude:__COMPONENT__/f/form.01.js
+		//VmInclude:__CURRENT_PATH__/../../library/shared-form.js
+		//-------------------------------------
+		var load2=m.load;
+		m.load=function(){
+			load2();
+			prev_tb=$vm.module_list[$vm.vm['__ID'].name].Table2;
+			console.log($vm.module_list[$vm.vm['__ID'].name].Table2);
+			if(prev_tb!=undefined){
+				var qry={'Data.Participant_uid':$("input[name='Participant_uid']").val()}
+				var post_learning="";
+				jQuery.ajaxSetup({async:false});
+				$vm.request({cmd:"find",table:prev_tb,query:qry,options:{}},function(res){
+					if(res.permission==false){
+						alert("No permission");
+						return;
+					}
+					if(res.result.length==0){
+					}
+					else{
+						post_learning=res.result[0].Data.PoTLS
+						//console.log("here: "+JSON.stringify(res.result));
+					}
+				})
+				jQuery.ajaxSetup({async:true});
+				if(post_learning!=''){
+					$('#OEI__ID').val(((parseFloat($('#ERLS__ID').val())/parseFloat(post_learning))*100).toFixed(1));
+					$('#OLI__ID').val(((parseFloat($('#LRLS__ID').val())/parseFloat(post_learning))*100).toFixed(1));
+				}
+			}
+		}
+
+	}
+</script>
+<style>
+        #D__ID .mt-95 {
+            max-width: 800px;
+        }
+        /*VmInclude:__CURRENT_PATH__/wappsystem-form.css*/
+</style>
+</div>
+</body>
+</html>

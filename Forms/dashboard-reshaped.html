@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wappsystem-form.html.css" rel="stylesheet" />
+        <link href="form.01.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID style="padding-left:50px">
+    <div class='nav__ID' id=unscheduled_show__ID style='display:xnone'>
+        <span>Unscheduled forms</span>
+        <ul>
+            <li><a href=adverse-event-form2.html>Adverse Events</a></li>
+            <li><a href=concom-medication-form2.html>Concomitant Medications</a></li>
+            <li><a href=file-notes-form.html>File Notes</a></li>
+            <li><a href=entry-checkin-call-form.html>Entry check in call</a></li>
+        </ul>
+        <span>Withdrawal</span>
+        <ul>
+            <li><a href=withdrawal-form.html>Study withdrawal </a></li>
+            <li><a href=stop-treatment-form.html>Stop treatment </a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+        </ul>
+    </div>
+    <div class='nav__ID' id=prescreening_show__ID style='display:xnone'>
+        <span>Pre-Screening </span>
+        <ul>
+            <li><a href=date-form.html>Visit Date</a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+            <span>Participant Consent </span>
+            <ul>
+                <li><a href=consent-date-form.html>Informed Consent </a></li>
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+            <span>Eligibility</span>
+            <ul>
+                <li><a href=demographics-form2.html>Demographics</a></li>
+                <li><a href=wristox-v2-form.html>WristOx<sub>2</sub></a></li>
+                <!--<li><a href=mmse-form.html>MMSE</a></li>-->
+                <li><a href=eligibility-form.html>Eligibility and Acceptance</a></li>
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+        </ul>
+    </div>
+    <div class='nav__ID' id=screening_show__ID style='display:xnone'>
+        <span>Screening</span>
+        <ul>
+            <li><a href=date-form.html>Visit Date</a></li>
+            <span>Participant Consent </span>
+            <ul>
+                <li><a href=consent-s-date-form.html>Informed Consent</a></li>
+                <li><a href=consent-mri-form.html>MRI Informed Consent</a></li>
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+            <span>Screening Assessment </span>
+            <ul>
+                <!--<li><a href=mmse-form.html>MMSE (After 6 months of pre-screening)</a></li>-->
+                <li><a href=demographics-long-form.html>Demographics</a></li>
+                <li><a href=medical-predef-form.html>Medical History Predefined conditions</a></li>
+                <li><a href=medical-assessment-form.html>Medical History</a></li>
+                <!--<li><a href=biomedical-measurements-form.html>Biomedical Measurements</a></li>-->
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+            <span>Eligibility </span>
+            <ul>
+                <li><a href=inclusion-exclusion-form4.html>Inclusion/ Exclusion</a></li>
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+        </ul>
+    </div>
+    <div id=baseline_show__ID style='display:xnone'>
+        <div class='nav__ID'>
+            <span>Baseline</span>
+            <ul>
+                <li><a href=date-form.html>Visit Date</a></li>
+                <li><a href=btb-form.html>Blood Test</a></li>
+                <li><a href=watchpat-form.html>WatchPat</a></li>
+                <li><a href=biomedical-measurements-form.html>Biomedical Measurements</a></li>
+                <!--<li><a href=stop-bang-form.html>STOP BANG</a></li>
+                <li><a href=cirs-form.html>Cumulative Illness Rating Scale- Geriatric Version</a></li>-->
+            </ul>
+            <span>Imaging </span>
+            <ul>
+                <li><a href=mri-form.html>MRI data</a></li>
+                <li><a href=pet-form.html>PET data</a></li>
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+            <span>Neuropsychological Assessment </span>
+            <ul>
+                <li><a href=ravlt-form.html>RAVLT</a></li>
+                <li><a href=trail-part-b-form.html>Trail Making Test Part A and B</a></li>
+                <li><a href=dkefs-form.html>DKEFS Stroop Test</a></li>
+                <li><a href=sdmt-form.html>Symbol Digit Modalities Test</a></li>
+                <li><a href=cantab-form.html>CANTAB</a></li>
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+            <span>Neuropsychological Assessment - Double entry</span>
+            <ul>
+                <li><a href=ravlt-form.html>RAVLT</a></li>
+                <li><a href=trail-part-b-form.html>Trail Making Test Part A and B</a></li>
+                <li><a href=dkefs-form.html>DKEFS Stroop Test</a></li>
+                <li><a href=sdmt-form.html>Symbol Digit Modalities Test</a></li>
+                <li><a href=cantab-form.html>CANTAB</a></li>
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+        </div>
+        <div class='nav__ID'>
+            <ul>
+                <span>Questionnaires </span>
+                <ul>
+                    <li><a href=gad7-form.html>Generalised Anxiety Disorder – 7 (GAD-7)</a></li>
+                    <li><a href=psqi-form.html>The Pittsburgh Sleep Quality Index (PSQI)</a></li>
+                    <li><a href=audit-part-form.html>Alcohol Use Disorders Identification Test (Audit)</a></li>
+                    <li><a href=phq-form.html>The Patient Health Questionnaire-9 (PHQ-9)</a></li>
+                    <li><a href=bc-cci-form.html>British Columbia Cognitive Complaints Inventory (BC-CCI)</a></li>
+                    <li><a href=eq-5d-form2.html>EQol-5D</a></li>
+                    <li><a href=ess-form.html>Epworth Sleepiness Scale (ESS)</a></li>
+                    <p class="small font-italic text-muted mt-1"></p>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <div id=6months_show__ID style='display:xnone'>
+        <div class='nav__ID'>
+            <span>6 Months</span>
+            <ul>
+                <li><a href=date-form.html>Visit Date</a></li>
+                <li><a href=btb-form.html>Blood Test</a></li>
+                <li><a href=watchpat-form.html>WatchPat</a></li>
+                <li><a href=biomedical-measurements-form.html>Biomedical Measurements</a></li>
+                <li><a href=entry-checkin-call-form.html>Entry check in call</a></li>
+            </ul>
+            <span>Neuropsychological Assessment </span>
+            <ul>
+                <li><a href=ravlt-form.html>RAVLT</a></li>
+                <li><a href=trail-part-b-form.html>Trail Making Test Part A and B</a></li>
+                <li><a href=dkefs-form.html>DKEFS Stroop Test</a></li>
+                <li><a href=sdmt-form.html>Symbol Digit Modalities Test</a></li>
+                <li><a href=cantab-form.html>CANTAB</a></li>
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+            <span>Neuropsychological Assessment - Double entry</span>
+            <ul>
+                <li><a href=ravlt-form.html>RAVLT</a></li>
+                <li><a href=trail-part-b-form.html>Trail Making Test Part A and B</a></li>
+                <li><a href=dkefs-form.html>DKEFS Stroop Test</a></li>
+                <li><a href=sdmt-form.html>Symbol Digit Modalities Test</a></li>
+                <li><a href=cantab-form.html>CANTAB</a></li>
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+        </div>
+        <div class='nav__ID'>
+            <ul>
+                <span>Questionnaires </span>
+                <ul>
+                    <li><a href=phq-form.html>The Patient Health Questionnaire-9 (PHQ-9)</a></li>
+                    <li><a href=bc-cci-form.html>British Columbia Cognitive Complaints Inventory (BC-CCI)</a></li>
+                    <li><a href=eq-5d-form2.html>EQol-5D</a></li>
+                    <li><a href=ess-form.html>Epworth Sleepiness Scale (ESS)</a></li>
+                    <p class="small font-italic text-muted mt-1"></p>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <div id=24months_show__ID style='display:xnone'>
+        <div class='nav__ID'>
+            <span>24 Months</span>
+            <ul>
+                <li><a href=date-form.html>Visit Date</a></li>
+                <li><a href=btb-form.html>Blood Test</a></li>
+                <li><a href=watchpat-form.html>WatchPat</a></li>
+                <li><a href=biomedical-measurements-form.html>Biomedical Measurements</a></li>
+                <!--<li><a href=cirs-form.html>Cumulative Illness Rating Scale- Geriatric Version</a></li>-->
+            </ul>
+            <span>Imaging </span>
+            <ul>
+                <li><a href=mri-form.html>MRI data</a></li>
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+            <span>Neuropsychological Assessment </span>
+            <ul>
+                <li><a href=ravlt-form.html>RAVLT</a></li>
+                <li><a href=trail-part-b-form.html>Trail Making Test Part A and B</a></li>
+                <li><a href=dkefs-form.html>DKEFS Stroop Test</a></li>
+                <li><a href=sdmt-form.html>Symbol Digit Modalities Test</a></li>
+                <li><a href=cantab-form.html>CANTAB</a></li>
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+            <span>Neuropsychological Assessment - Double entry</span>
+            <ul>
+                <li><a href=ravlt-form.html>RAVLT</a></li>
+                <li><a href=trail-part-b-form.html>Trail Making Test Part A and B</a></li>
+                <li><a href=dkefs-form.html>DKEFS Stroop Test</a></li>
+                <li><a href=sdmt-form.html>Symbol Digit Modalities Test</a></li>
+                <li><a href=cantab-form.html>CANTAB</a></li>
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+        </div>
+        <div class='nav__ID'>
+            <ul>
+                <span>Questionnaires </span>
+                <ul>
+                    <li><a href=phq-form.html>The Patient Health Questionnaire-9 (PHQ-9)</a></li>
+                    <li><a href=bc-cci-form.html>British Columbia Cognitive Complaints Inventory (BC-CCI)</a></li>
+                    <li><a href=eq-5d-form2.html>EQol-5D</a></li>
+                    <li><a href=ess-form.html>Epworth Sleepiness Scale (ESS)</a></li>
+                    <p class="small font-italic text-muted mt-1"></p>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <div id=treatment_show__ID style='display:xnone'>
+        <div class='nav__ID'>
+            <span>First Treatment Visit</span>
+            <ul>
+                <li><a href=treatment-1-form.html>First Visit</a></li>
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+            <span>Treatment Visit Follow-up </span>
+            <ul>
+                <li><a href=treatment-fu-form.html>Follow-up</a></li>
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

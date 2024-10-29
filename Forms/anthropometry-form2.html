@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wappsystem-form.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+          <div id=D__ID>
+            <!--third html start -->
+            <div class="container mt-95 mb-3">
+                <div class="row">
+                    <!-- form container start -->
+                    <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                        <div class="row">
+                            <div class="col-12">
+                                <!-- form start -->
+                                <form id="F__ID">
+                                    <h3 id="title__ID"></h3>
+                                    <!-- participant part for all tsak forms -------------------->
+                                    <div id="participant_div__ID">
+                                        <div class="form-group">
+                                            <fieldset class="subquestions">
+                                                <label><span class="">Participant</span>
+                                                    <input type=text name="Participant" class=form-control id=Participant__ID
+                                                        data-id="Participant" />
+                                                </label><br>
+                                                <label><span class="">Participant ID</span>
+                                                    <input type=text name="Participant_uid" class=form-control readonly />
+                                                </label>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <!-- form group -->
+                                    <div class="form-group">
+                                        <div class="questiongroup ">
+                                            <fieldset class="">
+                                                <div class=row>
+                                                    <div class="col-sm-3"><label><span class="">Weight (kg)</span><input type=number min="30" max="180" class=form-control name=weight></label></div>
+                                                    <div class="col-sm-3"><label><span class="">Height (cm)</span><input type=number min="100" max="210" class=form-control name=height></label></div>
+                                                    <div class="col-sm-3"><label><span class="">BMI (kg/m<sup>2</sup>)</span><input type=number readonly class=form-control name=BMI></label></div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="questiongroup ">
+                                            <fieldset class="">
+                                                <div class=row>
+                                                    <div class="col-sm-3"><label><span class="">Neck Circumference (cm)</span><input type=number min="30" max="55" class=form-control name=neck></label></div>
+                                                    <div class="col-sm-3"><label><span class="">Neck Circumference Corrected (cm)</span><input min="30" max="55" type=number class=form-control name=neck_corrected></label></div>
+                                                    <div class="col-sm-3"><label><span class="">Waist Circumference</span><input min="75" max="175" type=number class=form-control name=waist_circumference></label></div>
+                                                    <div class="col-sm-3"><label><span class="">Hip Circumference</span><input min="75" max="175" type=number class=form-control name=hip_circumference></label></div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="questiongroup ">
+                                            <fieldset class="">
+                                                <div class=row>
+                                                    <div class="col-sm-3"><label><span class="">Diastolic BP Left Arm (mmHg)</span><input type=number min="60" max="150" class=form-control name=diastolic_bp_left></label></div>
+                                                    <div class="col-sm-3"><label><span class="">Systolic BP Left Arm (mmHg)</span><input min="90" max="210" type=number class=form-control name=systolic_bp_left></label></div>
+                                                    <div class="col-sm-3"><label><span class="">Diastolic BP Right Arm (mmHg)</span><input min="60" max="150" type=number class=form-control name=diastolic_bp_right></label></div>
+                                                    <div class="col-sm-3"><label><span class="">Systolic BP Right Arm (mmHg)</span><input min="90" max="210" type=number class=form-control name=systolic_bp_right></label></div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="questiongroup ">
+                                            <fieldset class="">
+                                                <div class=row>
+                                                    <div class="col-sm-3"><label><span class="">Diastolic BP Mean (mmHg)</span><input type=number min="60" max="150" class=form-control name=diastolic_bp_mean></label></div>
+                                                    <div class="col-sm-3"><label><span class="">Systolic BP Mean (mmHg)</span><input min="90" max="210" type=number class=form-control name=systolic_bp_mean></label></div>
+                                                    <div class="col-sm-3"><label><span class="">Heart Rate (bpm)</span><input min="35" max="180" type=number class=form-control name=heart_rate></label></div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>                            
+                                    <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                                    <div class="form-group">
+                                        <div  id=questionnaire_status__ID class="pb-3">
+                                            <label><span>Set Status</span></label>
+                                            <fieldset class="">
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="_status" value="#FF0000">
+                                                    <span class="checkmark"
+                                                        style="background-color:#FF0000"></span>&nbsp;</label>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="_status" value="#FFCC00">
+                                                    <span class="checkmark"
+                                                        style="background-color:#FFCC00"></span>&nbsp;</label>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="_status" value="#00FF00">
+                                                    <span class="checkmark"
+                                                        style="background-color:#00FF00"></span>Manually&nbsp;&nbsp;</label>
+                                                <label class="radiobuttons">
+                                                    <input type="radio" name="_status" value="" checked>
+                                                    <span class="checkmark"
+                                                        style="background-color:#C9C9C9"></span>Automatically</label>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                        
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+        function F__ID() {
+            //-------------------------------------
+            //VmInclude: '__COMPONENT__/f/form.01.js'
+            //VmInclude: __CURRENT_PATH__/shared-form.js
+            //-------------------------------------
+            $('#F__ID input[name=Height]').on('change', function () { cal(); })
+            $('#F__ID input[name=Weight]').on('change', function () { cal(); })
+            var cal = function () {
+                var h = $('#F__ID input[name=Height]').val() / 100;
+                var w = $('#F__ID input[name=Weight]').val();
+                var b = (w / (h * h)).toFixed(2);
+                $('#F__ID input[name=BMI]').val(b);
+            }
+            //-------------------------------------
+
+        }
+    </script>
+    <style>
+        #D__ID .mt-95 {
+            max-width: 800px;
+        }
+
+        /*VmInclude:__CURRENT_PATH__/wappsystem-form.css*/
+    </style>
+</div>

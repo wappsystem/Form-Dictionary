@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wappsystem-form.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID>
+
+    <!--third html start -->
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id="F__ID">
+                            <h3 id=title__ID></h3>
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID" >
+                                <div class="form-group">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Participant</span>
+                                            <input type=text name="Participant" class=form-control id=Participant__ID
+                                                data-id="Participant" />
+                                        </label><br>
+                                        <label><span class="">Participant ID</span>
+                                            <input type=text name="Participant_uid" class=form-control readonly />
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+							<button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+							<hr>
+                            <!-- Form Inputs-------------------------------------->
+                            <!-- Question and Answerset -->
+							<div class="row px-4">
+								<div class='col'>
+								   <span>File</span>
+								   <div class="form-control">
+									   <u style='cursor:pointer' id=link_File_Name__ID></u>
+									   <br>
+									   <input type="file" name=File_Name style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=x_File_Name__ID>Remove</button>
+								   </div>
+                                </div>
+                            </div>
+							<hr>
+                            <div  class="form-group"><label><span class="">Select row</span><select id="rowSelector" class="form-control"></select></label></div>
+							<div id="dynamic_part_8"><div class="row px-4">
+                                <div class="col-sm-12 col-lg-3"><label> <span>Visit</span>
+                                <input class="form-control" type="text" name="Visit">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>Timepoint</span>
+                                <input class="form-control" type="text" name="Timepoint">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>KDT Test No EDF File Name</span>
+                                <input class="form-control" type="text" name="KDT_Test_No_EDF_File_Name">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>EO1 ScE i</span>
+                                <input class="form-control" type="text" name="EO1_ScE_i">
+                                </label></div>
+                                </div>
+                                <div class="row px-4">
+                                <div class="col-sm-12 col-lg-3"><label> <span>EC ScE i</span>
+                                <input class="form-control" type="text" name="EC_ScE_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>EO2 ScE i</span>
+                                <input class="form-control" type="text" name="EO2_ScE_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>All ScE i</span>
+                                <input class="form-control" type="text" name="All_ScE_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>Ave EOs ScE i</span>
+                                <input class="form-control" type="text" name="Ave_EOs_ScE_i">
+                                </label></div>
+                                </div>
+                                <div class="row px-4">
+                                <div class="col-sm-12 col-lg-3"><label> <span>EO1 Delta i</span>
+                                <input class="form-control" type="text" name="EO1_Delta_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>EO1 Theta i</span>
+                                <input class="form-control" type="text" name="EO1_Theta_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>EO1 Alpha i</span>
+                                <input class="form-control" type="text" name="EO1_Alpha_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>EO1 Sigma i</span>
+                                <input class="form-control" type="text" name="EO1_Sigma_i">
+                                </label></div>
+                                </div>
+                                <div class="row px-4">
+                                <div class="col-sm-12 col-lg-3"><label> <span>EO1 Beta i</span>
+                                <input class="form-control" type="text" name="EO1_Beta_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>EC Delta i</span>
+                                <input class="form-control" type="text" name="EC_Delta_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>EC Theta i</span>
+                                <input class="form-control" type="text" name="EC_Theta_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>EC Alpha i</span>
+                                <input class="form-control" type="text" name="EC_Alpha_i">
+                                </label></div>
+                                </div>
+                                <div class="row px-4">
+                                <div class="col-sm-12 col-lg-3"><label> <span>EC Sigma i</span>
+                                <input class="form-control" type="text" name="EC_Sigma_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>EC Beta i</span>
+                                <input class="form-control" type="text" name="EC_Beta_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>EO2 Delta i</span>
+                                <input class="form-control" type="text" name="EO2_Delta_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>EO2 Theta i</span>
+                                <input class="form-control" type="text" name="EO2_Theta_i">
+                                </label></div>
+                                </div>
+                                <div class="row px-4">
+                                <div class="col-sm-12 col-lg-3"><label> <span>EO2 Alpha i</span>
+                                <input class="form-control" type="text" name="EO2_Alpha_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>EO2 Sigma i</span>
+                                <input class="form-control" type="text" name="EO2_Sigma_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>EO2 Beta i</span>
+                                <input class="form-control" type="text" name="EO2_Beta_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>All Delta i</span>
+                                <input class="form-control" type="text" name="All_Delta_i">
+                                </label></div>
+                                </div>
+                                <div class="row px-4">
+                                <div class="col-sm-12 col-lg-3"><label> <span>All Theta i</span>
+                                <input class="form-control" type="text" name="All_Theta_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>All Alpha i</span>
+                                <input class="form-control" type="text" name="All_Alpha_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>All Sigma i</span>
+                                <input class="form-control" type="text" name="All_Sigma_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>All Beta i</span>
+                                <input class="form-control" type="text" name="All_Beta_i">
+                                </label></div>
+                                </div>
+                                <div class="row px-4">
+                                <div class="col-sm-12 col-lg-3"><label> <span>Ave EOs Delta i</span>
+                                <input class="form-control" type="text" name="Ave_EOs_Delta_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>Ave EOs Theta i</span>
+                                <input class="form-control" type="text" name="Ave_EOs_Theta_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>Ave EOs Alpha i</span>
+                                <input class="form-control" type="text" name="Ave_EOs_Alpha_i">
+                                </label></div>
+                                <div class="col-sm-12 col-lg-3"><label> <span>Ave EOs Sigma i</span>
+                                <input class="form-control" type="text" name="Ave_EOs_Sigma_i">
+                                </label></div>
+                                </div>
+                                <div class="row px-4">
+                                <div class="col-sm-12 col-lg-3"><label> <span>Ave EOs Beta i</span>
+                                <input class="form-control" type="text" name="Ave_EOs_Beta_i">
+                                </label></div>
+                                </div>
+                                </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function F__ID() {
+            //-------------------------------------
+            //VmInclude: '__COMPONENT__/f/form.01.js'
+            VmInclude: '__CURRENT_PATH__/shared-form.js'
+            //-------------------------------------
+            var load2=m.load;
+			m.load=function(){
+				load2();
+				$('#title__ID').html($vm.module_list[$vm.vm['__ID'].name].task_name);
+				
+				var fs=$vm.dyn_fields.split(',');
+				var txt="";
+				var ic=0;
+				for(ic=0;ic<fs.length;ic++){
+					if(ic%4==0){
+						txt+='<div class="row px-4">\r\n';
+						//txt+='<div class="questiongroup ">\r\n';
+						//txt+='<fieldset class="subquestions">\r\n';
+					}
+					txt+='<div class="col-sm-12 col-lg-3"><label> <span>'+fs[ic].replace(/_/g,' ')+'</span>\r\n';
+					txt+='<input class="form-control" type="text" name="'+fs[ic]+'" >\r\n';
+					txt+='</label></div>\r\n';
+					if(ic%4==3){
+						txt+='</div>\r\n';
+					}
+				}
+				if(ic%4!=3){
+					txt+='</div>\r\n';
+				}
+				$('#dynamic_part__ID').html(txt);
+//				if(m.input.record!=undefined){
+//					$('#record__ID').val(m.input.record.UID)
+//				}
+				if(m.input.readonly!=undefined) $('#submit__ID').hide();
+				//render_file_field_v2(m.input.record,'__ID',$('#File_Name__ID'));
+				m.set_file_link("File_Name");
+			}
+			//-------------------------------------
+            var varNames;
+            var varValues = Array();
+            //-------------------------------------
+            $('#F__ID input[name=File_Name]').on('change', function (evt) {
+                if (this.files.length == 1) {
+                    console.log("File Process")
+                    file_process(this.files[0])
+                }
+            });
+            $('#rowSelector').on('change', function (evt) {
+                var selectRow = $('#rowSelector').val() - 1;
+                console.log('row changed:' + selectRow)
+                //console.log(varValues);
+                // Store the value of each variable in the form-input field
+                for (var v = 0; v < varNames.length; v++) {                  
+                    $('#F__ID input[name="' + varNames[v] + '"]').val(varValues[selectRow][v]);
+                    //console.log("NAME: "+ varNames[v]+"VALUES: "+varValues[selectRow][v])
+                }
+            });
+
+            function parseVariableName(str) {
+                console.log("String: "+str)
+                str = str.replace(/[^\w\s]/gi, ''); // String may not contain special characters
+                str = str.trim(); // Trim any <space> characters from start or end of string
+                str = str.replace(/^\d+\s*/, ''); // String cannot start with numbers
+                str = str.split(' ').join('_'); // Join any remaining bits of string with underscores
+                return str;
+            }
+
+            //-------------------------------------
+            // File reader function
+            var file_process = function (file) {
+                console.log('File function')
+                // Create a new file reader and on loading a file -> run
+                var reader = new FileReader();
+                reader.onload = (function (e) {
+
+                    ///////////////////////////////////////////////////////////////////////////////
+                    // MANUAL EDIT REQUIRED HERE 
+                    // Specify whether the variabels are listed as rows (false) or as columns (true)
+                    // Specify the delimiter
+                    var columnWise = true;
+                    var delimiter = ',';
+                    var startRow = 0;
+
+                    // Get contents
+                    var contents = e.target.result;
+                    //console.log("CONTENT: "+contents)
+                    // Split the contents into rows based on the new-line character '\n'
+                    var rows = contents.replace(/"/g, '').replace(/\r/, '\n').replace(/\n\n/, '\n').split('\n');
+                    var optionsHTML = "<option value='na'>Select a row...</option>";
+                    for (var r = startRow; r < rows.length - 1; r++) {
+                        optionsHTML += "<option value='" + (r + 1 - startRow) + "'>" + (r + 1 - startRow) +
+                            "</option>";
+                    }
+                    $('#rowSelector').html(optionsHTML);
+
+                    // Extract the data
+                    if (columnWise) { // Column-wise
+                        for (var r = startRow; r < rows.length; r++) {
+                            // The first row contains all variable names
+                            if (r == startRow) {
+                                varNames = rows[r].split(delimiter);
+                                //console.log("Variables: "+JSON.stringify(varNames))
+                                // Replace any <space> or other special character
+                                for (v = 0; v < varNames.length; v++) {
+                                    varNames[v] = parseVariableName(varNames[v]);
+                                }
+                            } else {
+                                // The subsequent rows contains the values
+                                varValues[r - 1 - startRow] = rows[r].split(delimiter);
+                                //console.log("Values: "+JSON.stringify( varValues[r - 1 - startRow]))
+                            }
+                        }
+                    } else { // Row-wise
+                        // Initialize the varNames and varValue arrays
+                        varNames = Array();
+                        varValues = Array();
+                        // For each row, extract the variable name and value, and store in the form-input field.
+                        for (var r = 0; r < rows.length; r++) {
+                            // Split the variable name and value pair based on the delimiter
+                            var row = rows[r].split(delimiter);
+                            varNames[r] = parseVariableName(varNames[r]);
+                            varValues[r] = row[1];
+                            // Store the value of each variable in the form-input field
+                            //console.log(r+' - '+varNames[r])
+                            $('#F__ID input[name="' + varNames[r] + '"]').val(varValues[r]);
+                        }
+                    }
+                    //console.log(varNames.join());
+                });
+                reader.readAsText(file);
+            }
+        }
+      //------------------------------------
+    </script>
+    <style>
+        #D__ID #indicator__ID {
+            margin-left: 91px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 20px;
+            height: 5px;
+            background-color: red;
+            z-index: 200
+        }
+#F__ID .vas {
+    position: relative;
+    height: 419px;
+    width: 200px;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -ms-flex-align: stretch;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+    text-align: center;
+}
+#F__ID .vas__footer, .vas__header {
+    -ms-flex-positive: 0;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    font-weight: 700;
+    max-width: 150px;
+    margin: 0 auto;
+}
+#F__ID .vas__body {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -ms-flex-align: stretch;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    -ms-flex-positive: 1;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    padding: 10px;
+    margin: 0 auto;
+}
+#F__ID .vas-tick {
+    position: relative;
+    text-align: center;
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#F__ID .vas-tick__value {
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) translateX(-40px);
+    transform: translateY(-50%) translateX(-40px);
+    visibility: hidden;
+}
+#F__ID .vas-tick--step .vas-tick__value {
+    opacity: 1;
+    visibility: visible;
+}
+#F__ID .vas-tick__line {
+    opacity: 1;
+    visibility: visible;
+    width: 10px;
+    height: 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+#F__ID .vas-tick--step .vas-tick__line {
+    width: 28px;
+    height: 2px;
+
+}
+#F__ID .vas-tick--step1 .vas-tick__line {
+    width: 15px;
+    height: 1px;
+}
+#yht__ID{
+        padding-top:0;
+    }
+@media (min-width: 1024x) {
+    #yht__ID{
+        padding-top:35px;
+    }
+}
+
+
+        /*VmInclude:__CURRENT_PATH__/wappsystem-form.css*/
+    </style>
+</div>

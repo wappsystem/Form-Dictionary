@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wappsystem-form.html.css" rel="stylesheet" />
+        <link href="form.01.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                    if(e.type=='email') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID style="padding-left:50px">
+    <div class='nav__ID'  >
+        <span>Unscheduled forms</span>
+        <ul>
+            <li><a  class="small" href=../Forms/concom-medication-form2.html>Concomitant Medications</a></li>
+            <li><a  class="small" href=../Forms/file-notes-form.html>File Notes</a></li>
+        </ul>  
+        <br>     
+        <span>Screening video conference:</span>
+        <ul>
+            <li><a class="small" href=../Forms/eligible-form-part1.html>Eligible excluding MCI</a></li>
+            <span  class="small">Online via Questionnaire Portal</span>
+            <ul>
+                <li><a class="small" href=../Forms/consent-form5.html>Informed consent</a></li>
+            </ul>
+            <li><a class="small" href=../Forms/demographics-long-form2.html>Demographics</a></li>
+            <li><a class="small" href=../Forms/consent-coo-form.html>CRF-screening</a></li>
+            <li><a class="small" href=../Forms/moca-form.html>Montreal Cognitive Assessment (MoCA)</a></li>
+            <span  class="small">Neuropsychological Assessment </span>
+            <ul>
+                <li><a class="small" href=../Forms/wtar-form.html>WTAR</a></li>
+                <li><a class="small" href=../Forms/wlms-form.html>Wechsler Logical Memory subtest</a></li>
+                <li><a class="small" href=../Forms/bnt-form.html>Boston Naming Test (BNT)</a></li>
+                <li><a class="small" href=../Forms/ravlt-form2.html>Rey Auditory Verbal Learning Test (RAVLT)</a></li>
+                <li><a class="small" href=../Forms/sdmt-form2.html>Symbol Digit modalities Test</a></li>
+                <li><a class="small" href=../Forms/otmt-form.html>Oral Trail Making Test (OTMT)</a></li>
+                <li><a class="small" href=../Forms/wais3ds-form.html>WAIS-III Digit Span</a></li>
+                <li><a class="small" href=../Forms/cowat-form.html>Controlled Oral Word Association Test (COWAT)</a></li>
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+    
+            <li><a class="small" href=../Forms/eligible-form-part2.html>Add MCI to Eligibility</a></li>
+        </ul>
+        <br>
+        <span  class="small">HBA Functional Assessment Questionnaire: self-report form (HBA FAQ) </span>
+        <ul>
+            <li><a class="small" href=../Forms/hbafaq-form.html>HBA Functional Assessment Questionnaire</a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+        </ul>
+    <br>
+    </div>
+    <div class='nav__ID'  >
+        <span>Baseline</span>
+        <ul>
+            <span  class="small">Questionnaires</span>
+            <ul>
+                <li><a class="small" href=../Forms/ehealth-form.html>eHEALTH questionnaire</i></a></li>
+                <li><a class="small" href=../Forms/fss-form.html>Flinders Fatigue Scale (FSS)</a></li>
+                <li><a class="small" href=../Forms/psqi-form.html>Pittsburgh Sleep Quality Index (PSQI)</a></li>
+                <li><a class="small" href=../Forms/gds-form.html>15-items Geriatric Depression Scale (GDS)</a></li>
+                <li><a class="small" href=../Forms/bc-cci-form.html>British Columbia Cognitive Complaints Inventory (BC-CCI)</a></li>
+                <li><a class="small" href=../Forms/eq-5d-form2.html>Quality of life (EuroQol)</a></li>
+            </ul>
+            <span  class="small">CANTAB</span>
+            <ul>
+                <li><a class="small" href=../Forms/cantab-form2.html>CANTAB</a></li>
+            </ul>
+        </ul>
+        <br>
+        <span>Week 12</span>
+        <ul>
+            <span  class="small">Questionnaires</span>
+            <ul>
+                <li><a class="small" href=../Forms/isi-form.html>Insomnia Severity Index</a></li>
+                <li><a class="small" href=../Forms/fss-form.html>Flinders Fatigue Scale (FSS)</a></li>
+                <li><a class="small" href=../Forms/psqi-form.html>Pittsburgh Sleep Quality Index (PSQI)</a></li>
+                <li><a class="small" href=../Forms/gds-form.html>15-items Geriatric Depression Scale (GDS)</a></li>
+                <li><a class="small" href=../Forms/bc-cci-form.html>British Columbia Cognitive Complaints Inventory (BC-CCI)</a></li>
+                <li><a class="small" href=../Forms/eq-5d-form2.html>Quality of life (EuroQol)</a></li>
+                <li><a class="small" href=../Forms/uessf-form.html>User Engagement Scale Short Form</a></li>
+                <li><a class="small" href=../Forms/aec-form2.html>Adverse events checklist</a></li>
+            </ul>
+            <span  class="small">CANTAB</span>
+            <ul>
+                <li><a class="small" href=../Forms/cantab-form2.html>CANTAB</a></li>
+            </ul>
+        </ul>
+        <br>
+    </div>
+    <div class='nav__ID'  >
+        <span>W12 video conference:</span>
+        <ul>
+            <span  class="small">Neuropsychological Assessment </span>
+            <ul>
+                <li><a class="small" href=../Forms/consent-form5.html>Informed consent</a></li>
+                <li><a class="small" href=../Forms/wlms-form.html>Wechsler Logical Memory subtest</a></li>
+                <li><a class="small" href=../Forms/ravlt-form.html>Rey Auditory Verbal Learning Test (RAVLT)</a></li>
+                <li><a class="small" href=../Forms/cowat-form.html>Controlled Oral Word Association Test (COWAT)</a></li>
+                <li><a class="small" href=../Forms/wais3ds-form.html>WAIS-III Digit Span</a></li>
+                <li><a class="small" href=../Forms/sdmt-form2.html>Symbol Digit modalities Test</a></li>
+                <li><a class="small" href=../Forms/otmt-form.html>Oral Trail Making Test (OTMT)</a></li>
+                <p class="small font-italic text-muted mt-1"></p>
+            </ul>
+            <span  class="small">12-Week Feedback </span>
+            <ul>
+                <li><a class="small" href=../Forms/feedback-form.html>12-Week Feedback</a></li>
+            </ul>
+        </ul>
+
+    </div>
+
+<style>
+ol,ul,dl {
+    margin-bottom: 0;
+    line-height: 1;
+}
+</style>
+
+</body>
+</html>

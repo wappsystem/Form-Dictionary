@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wappsystem-form.html.css" rel="stylesheet" />
+        <link href="form.01.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID style="padding-left:50px">
+    <div class='nav__ID'>
+    <span>Unscheduled forms</span>
+    <ul>
+        <li><a href=adverse-event-form3.html>Adverse Events</a></li>
+        <li><a href=file-notes-form.html>File Notes</a></li>
+        <p class="small font-italic text-muted mt-1"></p>
+    </ul>
+    <span>Screening - Self Report Questionnaires
+    </span>
+    <ul>
+        <li><a href=date-form.html>Visit Date</a></li>
+        <!--<li><a href=consent-form.html>Consent</a></li>-->
+        <li><a href=medical-history-form.html>Medical History</a></li>
+        <li><a href=medications-form.html>Medication Questionnaire</a></li>
+        <li><a href=lifestyle-form.html>Lifestyle questionnaire  </a></li>
+        <li><a href=ethnicity-form.html>Ethnicity questionnaire  </a></li>
+        <li><a href=education-form.html>Education questionnaire  </a></li>
+        <li><a href=gds-form.html>Geriatric Depression Scale</a></li>
+        <p class="small font-italic text-muted mt-1"></p>
+    </ul>
+    <span>Screening Visit </span>
+    <ul>
+        <li><a href=isi-form.html>Insomnia Severity Index </a></li>
+        <li><a href=dsm-form.html>DSM-IV M.I.N.I </a></li>
+        <li><a href=mmse-form.html>Mini‐Mental State Examination Score</a></li>
+        <li><a href=wtars-form.html>Wechsler Test of Adult Reading Scores</a></li>
+        <li><a href=ravlts-form.html>Rey Auditory Verbal Learning Test Scores</a></li>
+        <li><a href=tmts-form.html>Trail Making Test Scores</a></li>
+        <li><a href=stroop-form.html>Stroop Colour and Text Test Scores</a></li>
+        <li><a href=wristox-form.html>Wrist Ox Output (ODI) </a></li>
+        <p class="small font-italic text-muted mt-1"></p>
+    </ul>
+</div>
+<div class='nav__ID'>
+    <span>Sleep study Night </span>
+    <ul>
+        <li><a href=date-form.html>Visit Date</a></li>
+        <li><a href=anthropometry-form.html>Anthropometry</a></li>
+        <p class="small font-italic text-muted mt-1"></p>
+        <span>Self Report Questionnaires </span>
+        <ul>
+            <li><a href=hads-form.html>Hospital Anxiety and Depression Scale </a></li>
+            <li><a href=me-form.html>Horne and Ӧstberg Morningness‐Eveningness Questionnaire</a></li>
+            <li><a href=psqi-form.html>Pittsburgh Sleep Quality Index </a></li>
+            <li><a href=ffs-form.html>Flinders Fatigue Scale Score</a></li>
+            <li><a href=ess-form.html>Epworth Sleepiness Scale (ESS)</a></li>
+            <li><a href=kss-form.html>Karolinska Sleepiness Scale (Evening)</a></li>
+            <li><a href=kss-form.html>Karolinska Sleepiness Scale (Morning)</a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+        </ul>
+        <span>Emotional Memory tasks </span>
+        <ul>
+            <li><a href=iapsle-form.html>Extended International Affective Picture System task evening learning</a></li>
+            <li><a href=iapsr1e-form.html>Extended International Affective Picture System task evening recognition</a></li>
+            <li><a href=iapsr2e-form.html>Extended International Affective Picture System task morning recognition</a></li>
+            <!--<li><a href=iapsl-data-test>TEST Extended International Affective Picture System task evening learning</a></li>
+            <li><a href=iapsr1-data-test>TEST Extended International Affective Picture System task evening recognition</a></li>
+            <li><a href=iapsr2-data-test>TEST Extended International Affective Picture System task morning recognition</a></li>-->
+            <li><ax href=pupillometry-form.html>Pupillometry output</a></li>
+            <li><a href=cavl-form.html>Cognitive Affective Verbal Learning task scores</a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+        </ul>
+        <p class="small font-italic text-muted mt-1"></p>
+        <span>PSG</span>
+        <ul>
+            <li><a href=psggrr-form.html>PSG Research Report </a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+        </ul>
+    </ul>
+</div>
+</body>
+</html>

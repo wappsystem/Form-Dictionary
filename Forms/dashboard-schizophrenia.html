@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wappsystem-form.html.css" rel="stylesheet" />
+        <link href="form.01.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID style="padding-left:50px">
+    <div class='nav__ID'>
+        <span>General</span>
+        <ul>
+            <li><a class="small"  href=adverse-event-form3.html>Adverse Events</a></li>
+            <li><a class="small"  href=file-notes-form.html>File Notes</a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+        </ul>
+        <span>Screening</span>
+        <ul>
+            <li><a class="small"  href=date-form.html>Visit Date</a></li>
+            <li><a class="small"  href=anthropometry-form.html>Anthropometry</a></li>
+            <li><ax class="small"  href=inclusion-exclusion-form.html>Inclusion/Exclusion Criteria</a></li>
+            <li><a class="small"  href=ethnicity-form.html>Ethnicity form</a></li>
+            <li><a class="small"  href=lifestyle-form.html>Lifestyle</a></li>
+            <li><a class="small"  href=education-form.html>Education</a></li>
+            <li><a class="small"  href=medications-form2.html>Concomitant medication</a></li>
+            <li><a class="small"  href=medical-history-form.html>Medical history</a></li>
+            <li><a class="small"  href=ess-form.html>Epworth Sleepiness Scale (ESS)</a></li>
+            <li><a class="small"  href=isi-form.html>Insomnia Severity Scale (ISI)</a></li>
+            <li><a class="small"  href=psqi-form.html>Pittsburgh Sleep Quality Index (PSQI)</a></li>
+            <li><a class="small"  href=dass-form.html>Depression Anxiety Stress Scale (DASS-21)</a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+        </ul>
+    </div>
+    <div class='nav__ID'>
+        <span>Baseline Visit Evening</span>
+        <ul>
+            <li><a class="small"  href=date-form.html>Visit Date</a></li>
+            <li><a class="small"  href=anthropometry-short-form.html>Anthropometry</a></li>
+            <li><a class="small"  href=pvt-form.html>PVT upload (Device PVT)</a></li>
+            <li><a class="small"  href=pvt-pc-form.html>PC PVT</a></li>
+            <li><a class="small"  href=stroop-ncog-form.html>Practice Stroop (Colour) </a></li>
+            <li><a class="small"  href=stroop-ncog-form.html>Practice Stroop (Text) </a></li>
+            <li><a class="small"  href=stroop-ncog-form.html>Real Stroop (Colour) </a></li>
+            <li><a class="small"  href=stroop-ncog-form.html>Real Stroop (Text) </a></li>
+            <li><a class="small"  href=tower-of-london-form.html>Tower of London </a></li>
+            <li><a class="small"  href=pre-finger-tapping-form.html>Finger Tapping Task (12mins)</a></li>
+            <li><a class="small"  href=pre-finger-tapping-form.html>Finger Tapping Task (12mins)</a></li>
+            <li><a class="small"  href=kss-form.html>KSS</a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+        </ul>
+        <span>Baseline Visit Morning</span>
+        <ul>
+            <li><a class="small"  href=word-pairs-form.html>Word Pairs Set 1 Data Entry</a></li>
+            <li><a class="small"  href=word-pairs-form.html>Word Pairs Set 2 Data Entry</a></li>
+            <li><a class="small"  href=post-finger-tapping-form.html>Finger Tapping Task (6mins)</a></li>
+            <li><a class="small"  href=post-finger-tapping-form.html>Finger Tapping Task (6mins)</a></li>
+            <li><a class="small"  href=kss-form.html>KSS</a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+        </ul>
+        <span>General</span>
+        <ul>
+            <li><a class="small"  href=psggrr-form.html>Grael Research PSG Report</a></li>
+            <li><a class="small"  href=actigraphy-form.html>Actigraphy File Upload</a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+        </ul>
+    </div>
+    <div class='nav__ID'>
+        <span>Follow Up Visit Evening</span>
+        <ul>
+            <li><a class="small"  href=date-form.html>Visit Date</a></li>
+            <li><a class="small"  href=anthropometry-short-form.html>Anthropometry</a></li>
+            <li><a class="small"  href=pvt-form.html>PVT upload (Device PVT)</a></li>
+            <li><a class="small"  href=pvt-pc-form.html>PC PVT</a></li>
+            <li><a class="small"  href=stroop-ncog-form.html>Practice Stroop (Colour) </a></li>
+            <li><a class="small"  href=stroop-ncog-form.html>Practice Stroop (Text) </a></li>
+            <li><a class="small"  href=stroop-ncog-form.html>Real Stroop (Colour) </a></li>
+            <li><a class="small"  href=stroop-ncog-form.html>Real Stroop (Text) </a></li>
+            <li><a class="small"  href=tower-of-london-form.html>Tower of London </a></li>
+            <li><a class="small"  href=ess-form.html>Epworth Sleepiness Scale (ESS)</a></li>
+            <li><a class="small"  href=isi-form.html>Insomnia Severity Scale (ISI)</a></li>
+            <li><a class="small"  href=psqi-form.html>Pittsburgh Sleep Quality Index (PSQI)</a></li>
+            <li><a class="small"  href=dass-form.html>Depression Anxiety Stress Scale (DASS-21)</a></li>
+            <li><a class="small"  href=pre-finger-tapping-form.html>Finger Tapping Task (12mins)</a></li>
+            <li><a class="small"  href=pre-finger-tapping-form.html>Finger Tapping Task (12mins)</a></li>
+            <li><a class="small"  href=kss-form.html>KSS</a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+        </ul>
+        <span>Follow Up Visit Morning</span>
+        <ul>
+            <li><a class="small"  href=word-pairs-form.html>Word Pairs Set 1 Data Entry</a></li>
+            <li><a class="small"  href=word-pairs-form.html>Word Pairs Set 2 Data Entry</a></li>
+            <li><a class="small"  href=post-finger-tapping-form.html>Finger Tapping Task (6mins)</a></li>
+            <li><a class="small"  href=post-finger-tapping-form.html>Finger Tapping Task (6mins)</a></li>
+            <li><a class="small"  href=kss-form.html>KSS</a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+        </ul>
+        <span>General</span>
+        <ul>
+            <li><a class="small"  href=psggrr-form.html>Grael Research PSG Report</a></li>
+            <li><a class="small"  href=actigraphy-form.html>Actigraphy File Upload</a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+        </ul>
+    </div>
+    <div class='nav__ID'>
+        <span>CPAP Review</span>
+        <ul>
+            <li><a class="small"  href=cpap-review-form.html>CPAP Review - Week 2</a></li>
+            <li><a class="small"  href=cpap-review-form.html>CPAP Review - Week 6</a></li>
+            <li><a class="small"  href=cpap-review-form.html>CPAP Review - Week 12</a></li>
+            <li><a class="small"  href=cpap-review-form.html>CPAP Review - Week 24</a></li>
+        </ul>
+    </div>
+    
+</body>
+</html>

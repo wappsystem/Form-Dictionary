@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wappsystem-form.html.css" rel="stylesheet" />
+        <link href="form.01.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID style="padding-left:50px">
+    <div class='nav__ID'>
+    <span>Unscheduled forms</span>
+    <ul>
+        <li><a href=../Forms/adverse-event-form3.html>Adverse Events</a></li>
+        <li><a href=../Forms/file-notes-form.html>File Notes</a></li>
+        <p class="small font-italic text-muted mt-1"></p>
+    </ul>
+    <span>Screening - Self Report Questionnaires
+    </span>
+    <ul>
+        <li><a href=../Forms/date-form.html>Visit Date</a></li>
+        <!--<li><a href=../Forms/consent-form.html>Consent</a></li>-->
+        <li><a href=../Forms/medical-history-form.html>Medical History</a></li>
+        <li><a href=../Forms/medications-form.html>Medication Questionnaire</a></li>
+        <li><a href=../Forms/lifestyle-form.html>Lifestyle questionnaire  </a></li>
+        <li><a href=../Forms/ethnicity-form.html>Ethnicity questionnaire  </a></li>
+        <li><a href=../Forms/education-form.html>Education questionnaire  </a></li>
+        <li><a href=../Forms/gds-form.html>Geriatric Depression Scale</a></li>
+        <p class="small font-italic text-muted mt-1"></p>
+    </ul>
+    <span>Screening Visit </span>
+    <ul>
+        <li><a href=../Forms/isi-form.html>Insomnia Severity Index </a></li>
+        <li><a href=../Forms/dsm-form.html>DSM-IV M.I.N.I </a></li>
+        <li><a href=../Forms/mmse-form.html>Mini‐Mental State Examination Score</a></li>
+        <li><a href=../Forms/wtars-form.html>Wechsler Test of Adult Reading Scores</a></li>
+        <li><a href=../Forms/ravlts-form.html>Rey Auditory Verbal Learning Test Scores</a></li>
+        <li><a href=../Forms/tmts-form.html>Trail Making Test Scores</a></li>
+        <li><a href=../Forms/stroop-form.html>Stroop Colour and Text Test Scores</a></li>
+        <li><a href=../Forms/wristox-form.html>Wrist Ox Output (ODI) </a></li>
+        <p class="small font-italic text-muted mt-1"></p>
+    </ul>
+</div>
+<div class='nav__ID'>
+    <span>Sleep study Night </span>
+    <ul>
+        <li><a href=../Forms/date-form.html>Visit Date</a></li>
+        <li><a href=../Forms/anthropometry-form.html>Anthropometry</a></li>
+        <p class="small font-italic text-muted mt-1"></p>
+        <span>Self Report Questionnaires </span>
+        <ul>
+            <li><a href=../Forms/hads-form.html>Hospital Anxiety and Depression Scale </a></li>
+            <li><a href=../Forms/me-form.html>Horne and Ӧstberg Morningness‐Eveningness Questionnaire</a></li>
+            <li><a href=../Forms/psqi-form.html>Pittsburgh Sleep Quality Index </a></li>
+            <li><a href=../Forms/ffs-form.html>Flinders Fatigue Scale Score</a></li>
+            <li><a href=../Forms/ess-form.html>Epworth Sleepiness Scale (ESS)</a></li>
+            <li><a href=../Forms/kss-form.html>Karolinska Sleepiness Scale (Evening)</a></li>
+            <li><a href=../Forms/kss-form.html>Karolinska Sleepiness Scale (Morning)</a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+        </ul>
+        <span>Emotional Memory tasks </span>
+        <ul>
+            <li><a href=../Forms/iapsle-form.html>Extended International Affective Picture System task evening learning</a></li>
+            <li><a href=../Forms/iapsr1e-form.html>Extended International Affective Picture System task evening recognition</a></li>
+            <li><a href=../Forms/iapsr2e-form.html>Extended International Affective Picture System task morning recognition</a></li>
+            <!--<li><a href=../Forms/iapsl-data-test>TEST Extended International Affective Picture System task evening learning</a></li>
+            <li><a href=../Forms/iapsr1-data-test>TEST Extended International Affective Picture System task evening recognition</a></li>
+            <li><a href=../Forms/iapsr2-data-test>TEST Extended International Affective Picture System task morning recognition</a></li>-->
+            <li><ax href=pupillometry-form.html>Pupillometry output</a></li>
+            <li><a href=../Forms/cavl-form.html>Cognitive Affective Verbal Learning task scores</a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+        </ul>
+        <p class="small font-italic text-muted mt-1"></p>
+        <span>PSG</span>
+        <ul>
+            <li><a href=../Forms/psggrr-form.html>PSG Research Report </a></li>
+            <p class="small font-italic text-muted mt-1"></p>
+        </ul>
+    </ul>
+</div>
+</body>
+</html>

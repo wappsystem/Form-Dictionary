@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wappsystem-form.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID>
+    <!--third html start -->
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id="F__ID">
+                            <h3 id="title__ID"></h3>
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID">
+                                <div class="form-group">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Participant</span>
+                                            <input type=text name="Participant" class=form-control id=Participant__ID
+                                                data-id="Participant" />
+                                        </label><br>
+                                        <label><span class="">Participant ID</span>
+                                            <input type=text name="Participant_uid" class=form-control readonly />
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+							<div class="form-group">
+								<div class="questiongroup ">
+									<fieldset class=""><label></label>
+										<div class=row>
+											<div class="col-sm-2"><label><span class="">NBACK</span><input class=form-control name=NBACK></label></div>
+											<div class="col-sm-2"><label><span class="">Start_Time</span><input class=form-control name=Start_Time></label></div>
+											<div class="col-sm-2"><label><span class="">NGTA</span><input class=form-control name=NGTA></label></div>
+											<div class="col-sm-2"><label><span class="">NGRT</span><input class=form-control name=NGRT></label></div>
+											<div class="col-sm-2"><label><span class="">GMRT</span><input class=form-control name=GMRT></label></div>
+											<div class="col-sm-2"><label><span class="">NTCR</span><input class=form-control name=NTCR></label></div>
+										</div>
+										<div class="row">
+											<div class="col-sm-2"><label><span class="">NTIC</span><input class=form-control name=NTIC></label></div>
+											<div class="col-sm-2"><label><span class="">NMIS</span><input class=form-control name=NMIS></label></div>
+											<div class="col-sm-2"><label><span class="">NMRT</span><input class=form-control name=NMRT></label></div>
+											<div class="col-sm-2"><label><span class="">MRTCM</span><input class=form-control name=MRTCM></label></div>
+											<div class="col-sm-2"><label><span class="">MRTCN</span><input class=form-control name=MRTCN></label></div>
+											<div class="col-sm-2"><label><span class="">SDCR</span><input class=form-control name=SDCR></label></div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="questiongroup ">
+									<fieldset class=""><label></label>
+										<div class=row>
+											<div class="col-sm-2"><label><span class="">SDCM</span><input class=form-control name=SDCM></label></div>
+											<div class="col-sm-2"><label><span class="">SDCN</span><input class=form-control name=SDCN></label></div>
+											<div class="col-sm-2"><label><span class="">MdRTCR</span><input class=form-control name=MdRTCR></label></div>
+											<div class="col-sm-2"><label><span class="">MdRTCM</span><input class=form-control name=MdRTCM></label></div>
+											<div class="col-sm-2"><label><span class="">MnRTCR</span><input class=form-control name=MnRTCR></label></div>
+											<div class="col-sm-2"><label><span class="">MxRTCR</span><input class=form-control name=MxRTCR></label></div>
+										</div>
+										<div class=row>
+											<div class="col-sm-2"><label><span class="">MF10CR</span><input class=form-control name=MF10CR></label></div>
+											<div class="col-sm-2"><label><span class="">MS10CR</span><input class=form-control name=MS10CR></label></div>
+											<div class="col-sm-2"><label><span class="">SDS10CR</span><input class=form-control name=SDS10CR></label></div>
+											<div class="col-sm-2"><label><span class="">SDS10CR</span><input class=form-control name=SDS10CR></label></div>
+											<div class="col-sm-2"><label><span class="">NTCM</span><input class=form-control name=NTCM></label></div>
+											<div class="col-sm-2"><label><span class="">NTCN</span><input class=form-control name=NTCN></label></div>
+																					</div>
+									</fieldset>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="questiongroup ">
+									<fieldset class=""><label></label>
+										<div class=row>
+											<div class="col-sm-2"><label><span class="">NTFM</span><input class=form-control name=NTFM></label></div>
+											<div class="col-sm-2"><label><span class="">NTFN</span><input class=form-control name=NTFN></label></div>
+											<div class="col-sm-2"><label><span class="">NTWR</span><input class=form-control name=NTWR></label></div>
+											<div class="col-sm-2"><label><span class="">NNO</span><input class=form-control name=NNO></label></div>
+											<div class="col-sm-2"><label><span class="">NRT</span><input class=form-control name=NRT></label></div>
+											<div class="col-sm-2"><label><span class="">NAC</span><input class=form-control name=NAC></label></div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							<button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script>
+	function F__ID(){
+		// Ver. 17/10/2019
+		//-------------------------------------
+		//VmInclude:__COMPONENT__/f/form.01.js
+		//VmInclude:__CURRENT_PATH__/../../library/shared-form.js
+		//-------------------------------------
+	}
+</script>
+<style>
+        #D__ID .mt-95 {
+            max-width: 800px;
+        }
+        /*VmInclude:__CURRENT_PATH__/wappsystem-form.css*/
+</style>
+</div>
+</body>
+</html>

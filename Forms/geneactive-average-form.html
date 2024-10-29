@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wappsystem-form.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID>
+
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id="F__ID">
+                            <h3 id="title__ID"></h3>
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID">
+                                <div class="row px-4">
+                                    <div class="col-sm-12 col-lg-9 ">
+                                        <span class=label__ID>Participant</span><br>
+                                        <input type=text name="Participant" class=form-control id=Participant__ID
+                                            data-id="Participant" />
+                                    </div>
+                                    <div class="col-sm-12 col-lg-3">
+                                        <span class=label__ID>Participant ID</span><br>
+                                        <input type=text name="Participant_uid" class=form-control readonly />
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <!-- form group -->
+                            <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                            <div class="form-group">
+                                <div class="pb-3">
+                                    <label><span>Set Status</span></label>
+                                    <fieldset class="">
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="_status" value="#FF0000">
+                                            <span class="checkmark"
+                                                style="background-color:#FF0000"></span>&nbsp;</label>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="_status" value="#FFCC00">
+                                            <span class="checkmark"
+                                                style="background-color:#FFCC00"></span>&nbsp;</label>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="_status" value="#00FF00">
+                                            <span class="checkmark"
+                                                style="background-color:#00FF00"></span>Manually&nbsp;&nbsp;</label>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="_status" value="" checked>
+                                            <span class="checkmark"
+                                                style="background-color:#C9C9C9"></span>Automatically</label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col'>
+                                    <span>File</span>
+                                    <div class="form-control">
+                                        <u style='cursor:pointer' id=link_File_Name__ID></u>
+                                        <br>
+                                        <input type="file" name=File_Name style="margin-top:6px" /> &nbsp&nbsp&nbsp
+                                        <button type="button" id=x_File_Name__ID>Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+<div id="dynamic_part_10"><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">cicadaVersion</span><input class="form-control" type="text" name="cicadaVersion"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">matlabVersion</span><input class="form-control" type="text" name="matlabVersion"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">subject</span><input class="form-control" type="text" name="subject"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">device</span><input class="form-control" type="text" name="device"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">samplingRate</span><input class="form-control" type="text" name="samplingRate"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">epochLength</span><input class="form-control" type="text" name="epochLength"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">recStartDate</span><input class="form-control" type="text" name="recStartDate"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">recEndDate</span><input class="form-control" type="text" name="recEndDate"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">annotAccBoutCrit</span><input class="form-control" type="text" name="annotAccBoutCrit"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">annotAccBoutClosed</span><input class="form-control" type="text" name="annotAccBoutClosed"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">annotAccBoutMetric</span><input class="form-control" type="text" name="annotAccBoutMetric"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">annotAccThrInactAngle</span><input class="form-control" type="text" name="annotAccThrInactAngle"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">annotAccThrInactTime</span><input class="form-control" type="text" name="annotAccThrInactTime"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">annotAccThrActTime</span><input class="form-control" type="text" name="annotAccThrActTime"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">annotAccThrActLig</span><input class="form-control" type="text" name="annotAccThrActLig"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">annotAccThrActMod</span><input class="form-control" type="text" name="annotAccThrActMod"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">annotAccThrActVig</span><input class="form-control" type="text" name="annotAccThrActVig"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">hoursReject</span><input class="form-control" type="text" name="hoursReject"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">interDailyStability</span><input class="form-control" type="text" name="interDailyStability"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">intraDailyVariability</span><input class="form-control" type="text" name="intraDailyVariability"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">avEuclNorm</span><input class="form-control" type="text" name="avEuclNorm"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">maxEuclNormMovWin10h</span><input class="form-control" type="text" name="maxEuclNormMovWin10h"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">clockOnsetMaxEuclNormMovWin10h</span><input class="form-control" type="text" name="clockOnsetMaxEuclNormMovWin10h"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">minEuclNormMovWin5h</span><input class="form-control" type="text" name="minEuclNormMovWin5h"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">clockOnsetMinEuclNormMovWin5h</span><input class="form-control" type="text" name="clockOnsetMinEuclNormMovWin5h"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">relAmpl</span><input class="form-control" type="text" name="relAmpl"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">hoursSustInact</span><input class="form-control" type="text" name="hoursSustInact"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">avEuclNormSustInact</span><input class="form-control" type="text" name="avEuclNormSustInact"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">hoursLightAct</span><input class="form-control" type="text" name="hoursLightAct"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">avEuclNormLightAct</span><input class="form-control" type="text" name="avEuclNormLightAct"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">hoursModVigAct</span><input class="form-control" type="text" name="hoursModVigAct"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">avEuclNormModVigAct</span><input class="form-control" type="text" name="avEuclNormModVigAct"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">avLightWidespec</span><input class="form-control" type="text" name="avLightWidespec"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">avLightWidespecGt1Lux</span><input class="form-control" type="text" name="avLightWidespecGt1Lux"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">minLightWidespecMovWin30m</span><input class="form-control" type="text" name="minLightWidespecMovWin30m"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">clockOnsetMinLightWidespecMovWin30m</span><input class="form-control" type="text" name="clockOnsetMinLightWidespecMovWin30m"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">maxLightWidespecMovWin30m</span><input class="form-control" type="text" name="maxLightWidespecMovWin30m"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">clockOnsetMaxLightWidespecMovWin30m</span><input class="form-control" type="text" name="clockOnsetMaxLightWidespecMovWin30m"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">avTemperatureWrist</span><input class="form-control" type="text" name="avTemperatureWrist"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">minTemperatureWristMovWin30m</span><input class="form-control" type="text" name="minTemperatureWristMovWin30m"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">clockOnsetMinTemperatureWristMovWin30m</span><input class="form-control" type="text" name="clockOnsetMinTemperatureWristMovWin30m"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">maxTemperatureWristMovWin30m</span><input class="form-control" type="text" name="maxTemperatureWristMovWin30m"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">clockOnsetMaxTemperatureWristMovWin30m</span><input class="form-control" type="text" name="clockOnsetMaxTemperatureWristMovWin30m"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">slpCount</span><input class="form-control" type="text" name="slpCount"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">napCount</span><input class="form-control" type="text" name="napCount"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">slpAcrossNoon</span><input class="form-control" type="text" name="slpAcrossNoon"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">avClockLightsOutAct</span><input class="form-control" type="text" name="avClockLightsOutAct"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">avClockLightsOnAct</span><input class="form-control" type="text" name="avClockLightsOnAct"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">avClockSlpOnsetAct</span><input class="form-control" type="text" name="avClockSlpOnsetAct"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">avClockMidSleepAct</span><input class="form-control" type="text" name="avClockMidSleepAct"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">avClockFinAwakeAct</span><input class="form-control" type="text" name="avClockFinAwakeAct"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">avSlpOnsetLatAct</span><input class="form-control" type="text" name="avSlpOnsetLatAct"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">avAwakeningAct</span><input class="form-control" type="text" name="avAwakeningAct"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">avWakeAfterSlpOnsetAct</span><input class="form-control" type="text" name="avWakeAfterSlpOnsetAct"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">avSnoozeTimeAct</span><input class="form-control" type="text" name="avSnoozeTimeAct"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">avTotSlpTimeAct</span><input class="form-control" type="text" name="avTotSlpTimeAct"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">avSlpPeriodAct</span><input class="form-control" type="text" name="avSlpPeriodAct"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">avSlpWindowAct</span><input class="form-control" type="text" name="avSlpWindowAct"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">avSlpEffSlpTimeAct</span><input class="form-control" type="text" name="avSlpEffSlpTimeAct"></label></div><div class="col-sm-12 col-lg-4"><label class=""><span class="">avSlpEffSlpPeriodAct</span><input class="form-control" type="text" name="avSlpEffSlpPeriodAct"></label></div></div><div class="row px-4"><div class="col-sm-12 col-lg-4"><label class=""><span class="">avAwakePerHourAct</span><input class="form-control" type="text" name="avAwakePerHourAct"></label></div></div></div>                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--VmInclude:__COMPONENT__/m/model.01.html-->
+    <script>
+        //---------------------------------------------
+        function F__ID() {
+            //-------------------------------------
+            //VmInclude: '__COMPONENT__/f/form.01.js'
+            VmInclude: '__CURRENT_PATH__/shared-form.js'
+            //-------------------------------------
+			var fields = "cicadaVersion,matlabVersion,subject,device,samplingRate,epochLength,recStartDate,recEndDate,annotAccBoutCrit,annotAccBoutClosed,annotAccBoutMetric,annotAccThrInactAngle,annotAccThrInactTime,annotAccThrActTime,annotAccThrActLig,annotAccThrActMod,annotAccThrActVig,hoursReject,interDailyStability,intraDailyVariability,avEuclNorm,maxEuclNormMovWin10h,clockOnsetMaxEuclNormMovWin10h,minEuclNormMovWin5h,clockOnsetMinEuclNormMovWin5h,relAmpl,hoursSustInact,avEuclNormSustInact,hoursLightAct,avEuclNormLightAct,hoursModVigAct,avEuclNormModVigAct,avLightWidespec,avLightWidespecGt1Lux,minLightWidespecMovWin30m,clockOnsetMinLightWidespecMovWin30m,maxLightWidespecMovWin30m,clockOnsetMaxLightWidespecMovWin30m,avTemperatureWrist,minTemperatureWristMovWin30m,clockOnsetMinTemperatureWristMovWin30m,maxTemperatureWristMovWin30m,clockOnsetMaxTemperatureWristMovWin30m,slpCount,napCount,slpAcrossNoon,avClockLightsOutAct,avClockLightsOnAct,avClockSlpOnsetAct,avClockMidSleepAct,avClockFinAwakeAct,avSlpOnsetLatAct,avAwakeningAct,avWakeAfterSlpOnsetAct,avSnoozeTimeAct,avTotSlpTimeAct,avSlpPeriodAct,avSlpWindowAct,avSlpEffSlpTimeAct,avSlpEffSlpPeriodAct,avAwakePerHourAct";
+			//-------------------------------------
+			var fs = fields.split(',');
+			var txt = "";
+			for (var i = 0; i < fs.length; i++) {
+				var type = "text"
+				//console.log(fs[i])
+                //console.log(i%4)
+                if(i%3==0) {console.log(i%3);txt+='<div class="row px-4">';}
+                console.log(fs[i])
+				txt += '<div class="col-sm-12 col-lg-4"><label class=""><span class="">'+ fs[i] +'</span>';
+				txt += '<input class="form-control" type="text" name="'+ fs[i] +'" /></div>';
+                if(i%3==2 || i==fs.length-1) {txt+='</div>';}
+            }
+			$('#dynamic_part__ID').html(txt);
+			//-------------------------------------
+            var load2 = m.load;
+            m.load = function () {
+                load2();
+                if (m.input.readonly != undefined) $('#submit__ID').hide();
+                //render_file_field_v2(m.input.record,'__ID',$('#File_Name__ID'));
+                m.set_file_link("File_Name");
+            }
+            //-------------------------------------
+            $('#F__ID input[name=File_Name]').on('change', function (evt) {
+                if (this.files.length == 1) {
+                    file_process(this.files[0])
+                }
+            })
+            //-------------------------------------
+            var file_process = function (file) {
+                var reader = new FileReader();
+                reader.onload = (function (e) {
+                    var contents = e.target.result;
+                    var lines = contents;
+                    var rows=lines.replace(/"/g, '').replace(/\r/, '\n').replace(/\n\n/, '\n').split('\n');
+                    var header=rows[0].split(',');
+                    var data=rows[1].split(',');
+                    for(var i=0;i<header.length;i++){
+                        if($('#F__ID input[name='+header[i]+']').length){
+                            $('#F__ID input[name='+header[i]+']').val(data[i])
+                        }
+                    }
+                })
+                reader.readAsText(file);
+            }
+            //-------------------------------------
+        }
+    </script>
+    <style>
+        #D__ID .mt-95 {
+            max-width: 800px;
+        }
+
+        /*VmInclude:__CURRENT_PATH__/wappsystem-form.css*/
+    </style>
+</div>
