@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wappsystem-form.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                    if(e.type=='tel') {e.type='text';e.value=e.name}
+                    if(e.type=='email') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID>
+	<div class="container-fluid full-height">
+		<div class="row row-height">
+			<div class="col-lg-6 content-left">
+				<div class="content-left-wrapper" style="background-color:#4D8DA5;">
+					<a href="index.html" id="logo"><img src="img/logo_sf_white.png" height="35px" alt=""></a>
+					<div>
+						<h2>We need your help!</h2><br>
+						<h3>Fill out the following survey and share your thoughts to help us understand more about what would be relevant and helpful when using a sleep health mobile application.</h3><br>
+						<h3>Once you have completed it, you’ll be in the running to win one of three $200 eGift Vouchers!</h3>
+						<a href="#start" class="btn_1 rounded mobile_btn">Start Now!</a>
+					</div>
+					<div class="copy"><img src="img/footer_logos.png" Width="65%" Height="65%">
+					</div>
+				</div>
+
+				<!-- /content-left-wrapper -->
+			</div>
+			<!-- /content-left -->
+			<div class="col-lg-6 content-right" id="start">
+				<div id="wizard_container">
+					<div id="top-wizard">
+                        <div id="progressbar"></div>
+                    </div>
+                    <form id="F__ID">
+                        <div id="middle-wizard">
+                            <div id=page1__ID>
+                                <h3 class="main_question"><strong>1/16</strong>About you:</h3>
+                                <div class="form-group">
+                                    <p> What is your sex?</p>
+                                    <label class="container_radio">Male
+                                        <input type="radio" name="sex" value="0" required>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Female
+                                        <input type="radio" name="sex" value="1" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_radio">Another term (please specify)
+                                        <input type="radio" name="sex" value="2" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div id=sex_other__ID style='display:xnone'>
+                                    <label ><span class=""></span>
+                                        <input class="form-control" type="text" name="sex_other" placeholder="Please specify" >
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>What is your age?</p>
+                                    <label ><span class=""></span>
+                                        <input class='form-control' type="number" min=18 max=99 name="age" required >
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>Which of the following best describes the <u>highest</u> level of education you have completed?</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="education" value="0" required >
+                                        <span class="checkmark"></span> Did not complete Primary school
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="education" value="1">
+                                        <span class="checkmark"></span> Primary school
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="education" value="2">
+                                        <span class="checkmark"></span> Secondary school
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="education" value="3">
+                                        <span class="checkmark"></span> Trade certificate
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="education" value="4">
+                                        <span class="checkmark"></span> Diploma
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="education" value="5">
+                                        <span class="checkmark"></span> Bachelor’s degree
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="education" value="6">
+                                        <span class="checkmark"></span> Postgraduate Degree
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=page2__ID>
+                                <h3 class="main_question"><strong>2/16</strong>About you:</h3>
+                                <div class="form-group">
+                                    <p>What is your current employment status?<br>Select all that apply</p>
+                                    <label class="container_check version_2">Employed full time (40 or more hours per week)
+                                        <input type="checkbox" name="employment" value="Employed full time" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Employed casually/part time (up to 38 hours per week)
+                                        <input type="checkbox" name="employment" value="Employed casually/part time">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Retired 
+                                        <input type="checkbox" name="employment" value="Retired">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Unemployed
+                                        <input type="checkbox" name="employment" value="Unemployed">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Student 
+                                        <input type="checkbox" name="employment" value="Student">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Other (please specify) 
+                                        <input type="checkbox" name="employment" value="Other">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div id=employment_other__ID style='display:xnone'>
+                                    <div class="form-group">
+                                        <label ><span class=""></span>
+                                            <input class="form-control" type="text" name="employment_other" placeholder="Please specify" >
+                                        </label>
+                                    </div>
+                                </div>
+                                <input style=display:xnone type=text name=employment_status id=employment >
+                                <div id='occupation__ID' style='display:xnone'>
+                                    <div class="form-group">
+                                        <p>What is your current occupation?</p>
+                                        <label ><span class=""></span>
+                                            <input class='form-control' type="text"  name="occupation" >
+                                        </label>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            <div id=page3__ID>
+                                <h3 class="main_question"><strong>3/16</strong>About your phone:</h3>
+                                <div class="form-group">
+                                    <p>How often do you use a smartphone?<br>(eg. iPhone, Samsung Galaxy or other touch screen mobile phone)</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="phone_use" value="0" required >
+                                        <span class="checkmark"></span> Never
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="phone_use" value="1">
+                                        <span class="checkmark"></span> Daily
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="phone_use" value="2">
+                                        <span class="checkmark"></span> Weekly
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="phone_use" value="3">
+                                        <span class="checkmark"></span> Less often than weekly
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>What type of phone do you use?<br>(eg. iPhone 12, Samsung Galaxy S21, Google Pixel 4 etc.)</p>
+                                    <label ><span class=""></span>
+                                        <input class='form-control' type="text" name=phone required >
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div id=page4__ID>
+                                <h3 class="main_question"><strong>4/16</strong>Wearable Devices:</h3>
+                                <div class="form-group">
+                                    <p>Do you use a wearable device?<br>(e.g. pedometer, fitness tracker, smart watch etc.)</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="wearable_use" value="0" required >
+                                        <span class="checkmark"></span> Yes
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="wearable_use" value="1">
+                                        <span class="checkmark"></span> No
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div id=page5__ID>
+                                <h3 class="main_question"><strong>5/16</strong>Wearable Devices:</h3>
+                                <div class="form-group">
+                                    <p>Which brand of wearable device do you use?<br>(e.g. Fitbit, Nike, Apple Watch, Garmin)</p>
+                                    <label ><span class=""></span>
+                                        <input class='form-control' type="text" name=wearable required >
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>What do you use the wearable device for?<br>Select all that apply</p>
+                                    <label class="container_check version_2">Communication
+                                        <input type="checkbox" name="wearable_use" value="Communication" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Fitness
+                                        <input type="checkbox" name="wearable_use" value="Fitness">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Health 
+                                        <input type="checkbox" name="wearable_use" value="Health">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Navigation
+                                        <input type="checkbox" name="wearable_use" value="Navigation">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Sport 
+                                        <input type="checkbox" name="wearable_use" value="Sport">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Other (please specify) 
+                                        <input type="checkbox" name="wearable_use" value="Other">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div id=wearable_use_other__ID style='display:xnone'>
+                                    <div class="form-group">
+                                        <label ><span class=""></span>
+                                            <input class="form-control" type="text" name="wearable_use_other" placeholder="Please specify" >
+                                        </label>
+                                    </div>
+                                </div>
+                                <input style=display:xnone type=text name=wearable_usage id=wearable_use >
+
+                            </div>
+                            <div id=page6__ID>
+                                <h3 class="main_question"><strong>6/16</strong>Wearable Devices:</h3>
+                                <div class="form-group">
+                                    <p>What features of the wearable device do you use?<br>Select all that apply</p>
+                                    <label class="container_check version_2">Heart-rate monitoring
+                                        <input type="checkbox" name="wearable_features" value="Heart-rate monitoring" >
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Sleep tracking
+                                        <input type="checkbox" name="wearable_features" value="Sleep tracking">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Step tracking 
+                                        <input type="checkbox" name="wearable_features" value="Step tracking">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Sports or physical activity tracking
+                                        <input type="checkbox" name="wearable_features" value="Sports or physical activity tracking">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Stress tracking 
+                                        <input type="checkbox" name="wearable_features" value="Stress tracking">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Breathing or relaxation exercises 
+                                        <input type="checkbox" name="wearable_features" value="Breathing or relaxation exercises">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Workout intensity 
+                                        <input type="checkbox" name="wearable_features" value="Workout intensity">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="container_check version_2">Other (please specify) 
+                                        <input type="checkbox" name="wearable_features" value="Other">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div id=wearable_features_other__ID style='display:xnone'>
+                                    <div class="form-group">
+                                        <label ><span class=""></span>
+                                            <input class="form-control" type="text" name="wearable_features_other" placeholder="Please specify" >
+                                        </label>
+                                    </div>
+                                </div>
+                                <input style=display:xnone type=text name=wearable_features_use id=wearable_features >
+
+                            </div>
+                            <div id=page7__ID>
+                                <h3 class="main_question"><strong>7/16</strong>Your sleep context:</h3>
+                                <div class="form-group">
+                                    <p>How often do you keep your phone by your bed at night?</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="phone_bed" value="0" required >
+                                        <span class="checkmark"></span> Every night
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="phone_bed" value="1">
+                                        <span class="checkmark"></span> Some nights
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="phone_bed" value="2">
+                                        <span class="checkmark"></span> Occasionally
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="phone_bed" value="3">
+                                        <span class="checkmark"></span> Never
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>How often do you use your phone as an alarm clock?</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="phone_alarm" value="0" required >
+                                        <span class="checkmark"></span> Every night
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="phone_alarm" value="1">
+                                        <span class="checkmark"></span> Some nights
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="phone_alarm" value="2">
+                                        <span class="checkmark"></span> Occasionally
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="phone_alarm" value="3">
+                                        <span class="checkmark"></span> Never
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>How often do you use your phone first thing in the morning (eg. checking email, social media or web browsing as soon as you wake)?</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="phone_morning" value="0" required >
+                                        <span class="checkmark"></span> Every morning
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="phone_morning" value="1">
+                                        <span class="checkmark"></span> Some mornings
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="phone_morning" value="2">
+                                        <span class="checkmark"></span> Occasionally
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="phone_morning" value="3">
+                                        <span class="checkmark"></span> Never
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div id=page8__ID>
+                                <h3 class="main_question"><strong>8/16</strong>The ideal sleep app:</h3>
+                                <div class="form-group">
+                                    <p>If an app were developed that <u>guided you through a program proven to improve sleep,</u> how likely do you think you would be to try it?</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_guide" value="0" required >
+                                        <span class="checkmark"></span> Very unlikely
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_guide" value="1">
+                                        <span class="checkmark"></span> Unlikely
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_guide" value="2">
+                                        <span class="checkmark"></span> Likely
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_guide" value="3">
+                                        <span class="checkmark"></span> Very likely
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>If an app were developed to help you <u>optimise your sleep, in order to improve productivity and performance,</u> how likely do you think you would be to try it?</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_performance" value="0" required >
+                                        <span class="checkmark"></span> Very unlikely
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_performance" value="1">
+                                        <span class="checkmark"></span> Unlikely
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_performance" value="2">
+                                        <span class="checkmark"></span> Likely
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_performance" value="3">
+                                        <span class="checkmark"></span> Very likely
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>If an app were personalisable to help you <u>discover your true individual sleep needs</u> (e.g., how many hours you really need each night), how likely do you think you would be to try it?</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_needs" value="0" required >
+                                        <span class="checkmark"></span> Very unlikely
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_needs" value="1">
+                                        <span class="checkmark"></span> Unlikely
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_needs" value="2">
+                                        <span class="checkmark"></span> Likely
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_needs" value="3">
+                                        <span class="checkmark"></span> Very likely
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div id=page9__ID>
+                                <h3 class="main_question"><strong>9/16</strong>The ideal sleep app:</h3>
+                                <div class="form-group">
+                                    <p>If an ideal sleep app were developed, how important do you think it would be for it to...</p>
+                                        <p>Include a sleep diary and tracking…</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_sleep_diary" value="0" required >
+                                        <span class="checkmark"></span> Unimportant
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_sleep_diary" value="1">
+                                        <span class="checkmark"></span> Slightly important
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_sleep_diary" value="2">
+                                        <span class="checkmark"></span> Important
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_sleep_diary" value="3">
+                                        <span class="checkmark"></span> Essential
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                        <p>Allow tracking of diet, exercise and other lifestyle factors…</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_lifestyle" value="0" required >
+                                        <span class="checkmark"></span> Unimportant
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_lifestyle" value="1">
+                                        <span class="checkmark"></span> Slightly important
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_lifestyle" value="2">
+                                        <span class="checkmark"></span> Important
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_lifestyle" value="3">
+                                        <span class="checkmark"></span> Essential
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div id=page10__ID>
+                                <h3 class="main_question"><strong>10/16</strong>The ideal sleep app:</h3>
+                                <div class="form-group">
+                                    <p>If an ideal sleep app were developed, how important do you think it would be for it to...</p>
+                                        <p>Let you share or compare sleep data with friends or other users…</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_share_friends" value="0" required >
+                                        <span class="checkmark"></span> Unimportant
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_share_friends" value="1">
+                                        <span class="checkmark"></span> Slightly important
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_share_friends" value="2">
+                                        <span class="checkmark"></span> Important
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_share_friends" value="3">
+                                        <span class="checkmark"></span> Essential
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                        <p>Let you share sleep data with your doctor…</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_share_doctor" value="0" required >
+                                        <span class="checkmark"></span> Unimportant
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_share_doctor" value="1">
+                                        <span class="checkmark"></span> Slightly important
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_share_doctor" value="2">
+                                        <span class="checkmark"></span> Important
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_share_doctor" value="3">
+                                        <span class="checkmark"></span> Essential
+                                    </label>
+                                </div>
+
+                            </div>
+                            <div id=page11__ID>
+                                <h3 class="main_question"><strong>11/16</strong>The ideal sleep app:</h3>
+                                <div class="form-group">
+                                    <p>If an ideal sleep app were developed, how important do you think it would be for it to...</p>
+                                        <p>Link to a wearable tracking device (eg. Fitbit, Apple Watch, ActiWatch)…</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_linked" value="0" required >
+                                        <span class="checkmark"></span> Unimportant
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_linked" value="1">
+                                        <span class="checkmark"></span> Slightly important
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_linked" value="2">
+                                        <span class="checkmark"></span> Important
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_linked" value="3">
+                                        <span class="checkmark"></span> Essential
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                        <p>Be usable offline (without an internet connection)…</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_offline" value="0" required >
+                                        <span class="checkmark"></span> Unimportant
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_offline" value="1">
+                                        <span class="checkmark"></span> Slightly important
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_offline" value="2">
+                                        <span class="checkmark"></span> Important
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_offline" value="3">
+                                        <span class="checkmark"></span> Essential
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>Not require the phone to be by the bed…</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_bed" value="0" required >
+                                        <span class="checkmark"></span> Unimportant
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_bed" value="1">
+                                        <span class="checkmark"></span> Slightly important
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_bed" value="2">
+                                        <span class="checkmark"></span> Important
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="app_bed" value="3">
+                                        <span class="checkmark"></span> Essential
+                                    </label>
+                                </div>
+                            </div>
+                            <div id=page12__ID>
+                                <h3 class="main_question"><strong>12/16</strong>Apps you have used:</h3>
+                                <div class="form-group">
+                                    <p>Do you use any health apps on your phone? If yes, please list any that come to mind (eg. Fitbit, Food diary, MyFitness Pal, etc.)…</p>
+                                    <label style='width:100%' ><span class=""></span>
+                                        <textarea class='form-control' name=health_apps  ></textarea>
+                                    </label>                                
+                                </div>
+                                <div class="form-group">
+                                    <p>Have you ever downloaded any apps for helping you sleep? They don’t necessarily have to be designed for sleep specifically (eg. relaxation music, meditation app, etc.) If yes, please list any that come to mind…</p>
+                                    <label style='width:100%' ><span class=""></span>
+                                        <textarea class='form-control' name=sleep_apps  ></textarea>
+                                    </label>                                
+                                </div>
+                            </div>
+                            <div id=page13__ID>
+                                <h3 class="main_question"><strong>13/16</strong>Apps you have used:</h3>
+                                <div class="form-group">
+                                    <p>For any apps you listed above…<br>List some things you <b>liked</b> about them:</p>
+                                    <label style='width:100%' ><span class=""></span>
+                                        <textarea class='form-control' name=sleep_apps_like  ></textarea>
+                                    </label>                                
+                                </div>
+                                <div class="form-group">
+                                    <p>List some things you <b>did not like</b> about them:</p>
+                                    <label style='width:100%' ><span class=""></span>
+                                        <textarea class='form-control' name=sleep_apps_not_like  ></textarea>
+                                    </label>                                
+                                </div>
+                            </div>
+                            <div id=page14__ID>
+                                <h3 class="main_question"><strong>14/16</strong>Apps you have used:</h3>
+                                <div class="form-group">
+                                    <p>Have you ever used any websites <u>(not apps)</u> <b>for improving sleep? If yes,</b> please list any that come to mind… (eg. Shut-i)</p>
+                                    <label style='width:100%' ><span class=""></span>
+                                        <textarea class='form-control' name=sleep_websites  ></textarea>
+                                    </label>                                
+                                </div>
+                                <div class="form-group">
+                                    <p>List some things you <b>liked</b> about them:</p>
+                                    <label style='width:100%' ><span class=""></span>
+                                        <textarea class='form-control' name=sleep_websites_like  ></textarea>
+                                    </label>                                
+                                </div>
+                                <div class="form-group">
+                                    <p>List some things you <b>did not like</b> about them:</p>
+                                    <label style='width:100%' ><span class=""></span>
+                                        <textarea class='form-control' name=sleep_websites_not_like  ></textarea>
+                                    </label>                                
+                                </div>
+                            </div>
+                            <div id=page15__ID>
+                                <h3 class="main_question"><strong>15/16</strong>One last thing…</h3>
+                                <div class="form-group">
+                                    <p>Anything else that would make the perfect sleep app? What should we include? What should we avoid?</p>
+                                    <label style='width:100%' ><span class=""></span>
+                                        <textarea class='form-control' name=perfect_app  ></textarea>
+                                    </label>                                
+                                </div>
+                            </div>
+                            <div id=page16__ID>
+                                <h3 class="main_question"><strong>16/16</strong>Prize draw</h3>
+                                <div class="form-group">
+                                    <p>I would like to take part in the prize draw for 1 of 3 eVouchers valued at $200.</p>
+                                    <label class="container_radio">
+                                        <input type="radio" name="voucher" value="0" required >
+                                        <span class="checkmark"></span> Yes
+                                    </label>
+                                    <label class="container_radio">
+                                        <input type="radio" name="voucher" value="1">
+                                        <span class="checkmark"></span> No
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <p>I am happy to provide the following mobile number and if successful in the Prize Draw be contacted by a member of the research team to receive the prize.</p>                           
+                                    <label ><span class=""></span>
+                                        <input class='form-control' type="text" name="mobile" placeholder="Mobile number">
+                                    </label>                                
+                                </div>
+                                <div class="form-group">
+                                    <p>If you would like to receive a summary of our findings following the study, please enter your email address here:</p>                           
+                                    <label ><span class=""></span>
+                                        <input class='form-control' type="email" name="email" placeholder="Email">
+                                    </label>                                
+                                </div>
+                                <div class="form-group">
+                                    <p><b>You’re all done! Thank you for taking the time to complete this survey. Your participation is appreciated.</b></p> 
+                                    <p>If you have any questions or concerns regarding this questionnaire, please contact the study team on phone (02) 9114 0481 or email sleepfix@woolcock.org.au.</p>
+                                    <p><b>Remember to click on Submit</b></p>                          
+                                </div>
+                            </div>
+
+                            <div id="bottom-wizard">
+                                <button type=button d=-1  id=previous__ID class="backward">Previous</button>
+                                <button type=submit id=next__ID d=1  class="forward">Next</button>
+                                <button type="submit" id=submit1__ID class="forward">Submit</button>
+                            </div>
+                            <input style='display:xnone' class='form-control' type=text id=entry__ID name="Entry_ID" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function F__ID() {
+            //-------------------------------------
+           //VmInclude: '__COMPONENT__/f/form.01.js'
+            //-------------------------------------
+            var N = 16;
+            var current_I = 1;
+            //---------------------------------------
+            var position = "";
+            var dx;
+            //-------------------------------------
+            var load2 = m.load;
+            m.load = function () {
+                load2();
+                $('#submit1__ID').show();
+                $("#submit1__ID").css('display','inline-block');
+                $('#submit1__ID').css('display','none')
+                console.log(JSON.stringify(m.input))
+                if ( $('[type="date"]').prop('type') != 'date' ) {
+                    $('[type="date"]').datepicker();
+                }
+                show_section(1);
+            }
+            //---------------------------------------
+            var old_submit = m.submit;
+            m.submit = function (event) {
+                event.preventDefault();
+                if (current_I == N) {
+                    $('#F__ID *').removeAttr('disabled');
+                    $('#submit1__ID').hide();
+                    $('#previous__ID').hide();
+                    var entryID=""
+                    if(m.input.entry_id!=undefined){
+                        entryID=m.input.entry_id
+                    }
+                    $('#entry__ID').val(entryID);
+                    old_submit(event);
+                    if (m.prefix == undefined) { $vm.load_module('thanks', '', {}); }
+                    else $vm.load_module(m.prefix + 'thanks', '', {});
+
+                }
+                else {
+                    if($("input[name='wearable_use']:checked").val()=='1' && current_I==4){
+                        current_I=6
+                    }
+                    if(current_I==N-1){
+                        $('#next__ID').css('display','none')
+                        $("#submit1__ID").css('display','inline-block');
+                    }
+                    show_section(current_I +1) 
+                }
+            }
+            //-------------------------------
+            $('#F__ID button').on('click', function (event) {
+                //Active only for Previous page
+                var d = $(this).attr("d");
+                d = parseInt(d);
+                if (d < 0) {
+                    if($("input[name='wearable_use']:checked").val()=='1' && current_I==7){
+                        current_I=5
+                    }                
+                    if(current_I==N){
+                        $('#next__ID').css('display','inline-block')
+                        $('#submit1__ID').css('display','none')
+                    }
+                    show_section(current_I - 1);
+                }
+            })
+            //---------------------------------------
+            var show_section = function (I) {
+                for (var i = 1; i <= N; i++) {
+                    $('#page' + i + "__ID").hide(); // remove/add '//' for Test mode/Production mode 
+                    $('#page' + i + "__ID * ").attr('disabled', 'disabled');
+                }
+                if (I < 1) { I = 1; $('#page' + I + '__ID').show(); }
+                if (I >= N) I = N;
+                $('#page' + I + '__ID').show();
+                $('#page' + I + "__ID * ").removeAttr('disabled');
+                current_I = I;
+                $(window).scrollTop(0);
+            }
+            //-------------------------------------
+            $("input[name='sex']").on('change', function () {
+                if($("input[name='sex']:checked").val()=='2'){
+                    $('#sex_other__ID').show();
+                    $("input[name='sex_other']").prop('required', true)
+                }
+                else{
+                    $("input[name='sex_other']").prop('required', false);
+                    $('#sex_other__ID').hide();
+                }
+            })
+            $("input[name='wearable_use']").on('change', function () {
+                if($("input[name='wearable_use']:checked").val()=='Other'){
+                    $('#wearable_use_other__ID').show();
+                    $("input[name='wearable_use_other']").prop('required', true)
+                }
+                else{
+                    $("input[name='wearable_use_other']").prop('required', false);
+                    $('#wearable_use_other__ID').hide();
+                }
+            })
+            $("input[name='wearable_features']").on('change', function () {
+                if($("input[name='wearable_features']:checked").val()=='Other'){
+                    $('#wearable_features_other__ID').show();
+                    $("input[name='wearable_features_other']").prop('required', true)
+                }
+                else{
+                    $("input[name='wearable_features_other']").prop('required', false);
+                    $('#wearable_features_other__ID').hide();
+                }
+            })
+
+            //--------------------------
+            $('input[name=employment]').change(function() {
+                var value = [];
+                $("input[name*='employment']").each(function () {
+                    // Get all checked checboxes in an array
+                    if (jQuery(this).is(":checked")) {
+                        value.push($(this).val());
+                    }
+                });
+                $("#employment").val(value.join(", "));
+                console.log( $("#employment").val())
+                $("input[name='occupation']").prop('required', false);
+                $('#occupation__ID').hide();
+                $("input[name='employment_other']").prop('required', false);
+                $('#employment_other__ID').hide();
+                for(var i=0;i<value.length;i++){
+                    //console.log("A"+value[i]+"A")
+                    if(value[i]=='Employed full time' || value[i]=='Employed casually/part time'){
+                        $('#occupation__ID').show();
+                        $("input[name='occupation']").prop('required', true)
+                    }
+                    if(value[i]=='Other'){
+                        $('#employment_other__ID').show();
+                        $("input[name='employment_other']").prop('required', true)
+                    }
+
+                }
+            })
+            $('input[name=wearable_use]').change(function() {
+                var value = [];
+                $("input[name*='wearable_use']").each(function () {
+                    // Get all checked checboxes in an array
+                    if (jQuery(this).is(":checked")) {
+                        value.push($(this).val());
+                    }
+                });
+                $("#wearable_use").val(value.join(", "));
+                $("input[name='wearable_use_other']").prop('required', false);
+                $('#wearable_use_other__ID').hide();
+                for(var i=0;i<value.length;i++){
+                    //console.log("A"+value[i]+"A")
+                    if(value[i]=='Other'){
+                        $('#wearable_use_other__ID').show();
+                        $("input[name='wearable_use_other']").prop('required', true)
+                    }
+
+                }
+            });
+            $('input[name=wearable_features]').change(function() {
+                var value = [];
+                $("input[name*='wearable_features']").each(function () {
+                    // Get all checked checboxes in an array
+                    if (jQuery(this).is(":checked")) {
+                        value.push($(this).val());
+                    }
+                });
+                $("#wearable_features").val(value.join(", "));
+                $("input[name='wearable_features_other']").prop('required', false);
+                $('#wearable_features_other__ID').hide();
+                for(var i=0;i<value.length;i++){
+                    //console.log("A"+value[i]+"A")
+                    if(value[i]=='Other'){
+                        $('#wearable_features_other__ID').show();
+                        $("input[name='wearable_features_other']").prop('required', true)
+                    }
+
+                }
+            });
+        }
+      //------------------------------------
+    </script>
+    <style>
+        #D__ID p {
+            /*font-weight: bold;*/
+        }
+    </style>
+</div></body>
+</html>

@@ -17,6 +17,8 @@
                     if(e.type=='time') {e.type='text';e.value=e.name}
                     if(e.type=='number') {e.type='text';e.value=e.name}
                     if(e.type=='range') {e.type='text';e.value=e.name}
+                    if(e.type=='tel') {e.type='text';e.value=e.name}
+                    if(e.type=='email') {e.type='text';e.value=e.name}
                 });
                 var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
                     console.log(e)
