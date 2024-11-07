@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wapp-form.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                    if(e.type=='tel') {e.type='text';e.value=e.name}
+                    if(e.type=='email') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID>
+  <!--third html start -->
+  <div class="container mt-95">
+    <!-- form container start -->
+    <div class="formbox">
+      <!-- form start -->
+      <form id="F__ID">
+        <span id=title__ID></span>
+        <!-- participant name and study id -->
+        <div id="participant_div__ID">
+          <div class="formgroup">
+            <fieldset class="grid-container-2">
+              <div>
+                <label><span class="question">Participant</span>
+                  <input type=text name="Participant" class=formcontrol id=Participant__ID data-id="Participant" />
+                </label>
+              </div>
+              <div>
+                <label><span class="question">Participant ID</span>
+                  <input type=text name="Participant_uid" class=formcontrol readonly />
+                </label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <!-- form group -->
+        <div class="formgroup">
+          <fieldset class="">
+            <h3>i. Inclusion Criteria</h3>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">Community-dwelling?</span></label><br>
+                  <input id="dwelling_1__ID" name="dwelling" type="radio" value="1" required>
+                  <label class="rd_btn" for="dwelling_1__ID">Yes</label>
+                  <input id="dwelling_2__ID" name="dwelling" type="radio" value="0">
+                  <label class="rd_btn" for="dwelling_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">Age 35-65?</span></label><br>
+                  <input id="age_1__ID" name="age" type="radio" value="1" required>
+                  <label class="rd_btn" for="age_1__ID">Yes</label>
+                  <input id="age_2__ID" name="age" type="radio" value="0">
+                  <label class="rd_btn" for="age_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">PSG confirmed OSA?</span></label><br>
+                  <input id="osa_1__ID" name="osa" type="radio" value="1" required>
+                  <label class="rd_btn" for="osa_1__ID">Yes</label>
+                  <input id="osa_2__ID" name="osa" type="radio" value="0">
+                  <label class="rd_btn" for="osa_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">CPAP compliance?</span></label><br>
+                  <input id="compliance_1__ID" name="compliance" type="radio" value="1" required>
+                  <label class="rd_btn" for="compliance_1__ID">Yes</label>
+                  <input id="compliance_2__ID" name="compliance" type="radio" value="0">
+                  <label class="rd_btn" for="compliance_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">Withdrawal ok?</span></label><br>
+                  <input id="withdrawal_1__ID" name="withdrawal" type="radio" value="1" required>
+                  <label class="rd_btn" for="withdrawal_1__ID">Yes</label>
+                  <input id="withdrawal_2__ID" name="withdrawal" type="radio" value="0">
+                  <label class="rd_btn" for="withdrawal_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">Can consent?</span></label><br>
+                  <input id="consent_1__ID" name="consent" type="radio" value="1" required>
+                  <label class="rd_btn" for="consent_1__ID">Yes</label>
+                  <input id="consent_2__ID" name="consent" type="radio" value="0">
+                  <label class="rd_btn" for="consent_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">Fluent in English?</span></label><br>
+                  <input id="english_1__ID" name="english" type="radio" value="1" required>
+                  <label class="rd_btn" for="english_1__ID">Yes</label>
+                  <input id="english_2__ID" name="english" type="radio" value="0">
+                  <label class="rd_btn" for="english_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="formgroup">
+          <fieldset class="grid-container-1">
+            <h3>ii. Exclusion Criteria</h3>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">Commercial driver?</span></span></label><br>
+                  <input id="com_driver_1__ID" name="com_driver" type="radio" value="1" required>
+                  <label class="rd_btn" for="com_driver_1__ID">Yes</label>
+                  <input id="com_driver_2__ID" name="com_driver" type="radio" value="0">
+                  <label class="rd_btn" for="com_driver_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">CVD?</span></span></label><br>
+                  <input id="cvd_1__ID" name="cvd" type="radio" value="1" required>
+                  <label class="rd_btn" for="cvd_1__ID">Yes</label>
+                  <input id="cvd_2__ID" name="cvd" type="radio" value="0">
+                  <label class="rd_btn" for="cvd_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">MCI or dementia?</span></label><br>
+                  <input id="mci_1__ID" name="mci" type="radio" value="1" required>
+                  <label class="rd_btn" for="mci_1__ID">Yes</label>
+                  <input id="mci_2__ID" name="mci" type="radio" value="0">
+                  <label class="rd_btn" for="mci_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">Sedative use?</span></label><br>
+                  <input id="sedative_1__ID" name="sedative" type="radio" value="1" required>
+                  <label class="rd_btn" for="sedative_1__ID">Yes</label>
+                  <input id="sedative_2__ID" name="sedative" type="radio" value="0">
+                  <label class="rd_btn" for="sedative_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">Shift worker?</span></label><br>
+                  <input id="shiftworker_1__ID" name="shiftworker" type="radio" value="1" required>
+                  <label class="rd_btn" for="shiftworker_1__ID">Yes</label>
+                  <input id="shiftworker_2__ID" name="shiftworker" type="radio" value="0">
+                  <label class="rd_btn" for="shiftworker_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">Driving impairment?</span></label><br>
+                  <input id="drv_impairment_1__ID" name="drv_impairment" type="radio" value="1" required>
+                  <label class="rd_btn" for="drv_impairment_1__ID">Yes</label>
+                  <input id="drv_impairment_2__ID" name="drv_impairment" type="radio" value="0">
+                  <label class="rd_btn" for="drv_impairment_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">Severe COVID?</span></label><br>
+                  <input id="severe_covid_1__ID" name="severe_covid" type="radio" value="1" required>
+                  <label class="rd_btn" for="severe_covid_1__ID">Yes</label>
+                  <input id="severe_covid_2__ID" name="severe_covid" type="radio" value="0">
+                  <label class="rd_btn" for="severe_covid_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">Current COVID?</span></label><br>
+                  <input id="current_covid_1__ID" name="current_covid" type="radio" value="1" required>
+                  <label class="rd_btn" for="current_covid_1__ID">Yes</label>
+                  <input id="current_covid_2__ID" name="current_covid" type="radio" value="0">
+                  <label class="rd_btn" for="current_covid_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">Vaccination?</span></label><br>
+                  <input id="vaccination_1__ID" name="vaccination" type="radio" value="1" required>
+                  <label class="rd_btn" for="vaccination_1__ID">Yes</label>
+                  <input id="vaccination_2__ID" name="vaccination" type="radio" value="0">
+                  <label class="rd_btn" for="vaccination_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="formgroup">
+              <fieldset class="grid-container-1">
+                <div class="">
+                  <label><span class="question">Other MHx?</span></label><br>
+                  <input id="other_mhx_1__ID" name="other_mhx" type="radio" value="1" required>
+                  <label class="rd_btn" for="other_mhx_1__ID">Yes</label>
+                  <input id="other_mhx_2__ID" name="other_mhx" type="radio" value="0">
+                  <label class="rd_btn" for="other_mhx_2__ID">No</label>
+                </div>
+              </fieldset>
+            </div>
+          </fieldset>
+        </div>
+        <div class="formgroup">
+          <fieldset class="grid-container-1">
+            <label><span class="question">Eligibility</span></label>
+            <div class="">
+              <label><span class="question">Eligible for study?</span></label><br>
+              <input id="eligible_1__ID" name="eligible" type="radio" value="1" disabled>
+              <label class="rd_btn" for="eligible_1__ID">Yes</label>
+              <input id="eligible_2__ID" name="eligible" type="radio" value="0" disabled>
+              <label class="rd_btn" for="eligible_2__ID">No</label>
+            </div>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    function F__ID() {
+      //-------------------------------------
+      //VmInclude: '__HOST__/assets/js/form.01.js'
+      //VmInclude: '__HOST__/assets/js/shared-form.js'
+      //-------------------------------------
+      var load2 = m.load;
+      m.load = function () {
+        load2();
+      }
+      //-------------------------------------
+      var before_submit = m.before_submit;
+      m.before_submit = function (data, index) {
+        if (data.dwelling == "1" &&
+          data.age == "1" &&
+          data.osa == "1" &&
+          data.compliance == "1" &&
+          data.withdrawal == "1" &&
+          data.consent == "1" &&
+          data.english == "1" &&
+          data.com_driver == "0" &&
+          data.cvd == "0" &&
+          data.mci == "0" &&
+          data.sedative == "0" &&
+          data.shiftworker == "0" &&
+          data.drv_impairment == "0" &&
+          data.severe_covid == "0" &&
+          data.current_covid == "0" &&
+          data.vaccination == "0" &&
+          data.other_mhx == "0") data.eligible = "1";
+        else data.eligible = "0";
+        return before_submit(data, index);
+      }
+      //-------------------------------------
+      m.after_insert = function(data,res){
+        update_participant(data);
+      }
+      //-------------------------------------
+      m.after_update = function(data,res){
+        update_participant(data);
+      }
+      //-------------------------------------
+      var update_participant=function(data){
+        //console.log("common: "+JSON.stringify(data))
+				var tb = $vm.module_list['participant-data'].Table;
+				var p_uid=parseInt(data.Participant_uid);
+				var qry = { UID: p_uid };
+				var pw="";
+        jQuery.ajaxSetup({ async: false });
+        $vm.request({ cmd: "find", table: tb, query: qry }, function (res) {
+            if (res.result.length != 0) {
+              var rid=res.result[0]._id;
+              res.result[0].Data.screening=data.eligible
+              var res_data=res.result[0].Data
+              $vm.request({cmd:"update",id:rid,table:tb,data:res_data},function(res){
+                if(res.status=="lk"){
+                    $vm.alert("This record is locked.");
+                    return;
+                }
+                //-----------------------------
+                if(res.status=="np"){
+                    alert("No permission to update this record.");
+                    return;
+                }
+              });
+            }
+            else $vm.alert("Sorry, something went wrong!")
+        });
+        jQuery.ajaxSetup({ async: true });
+        $vm.refresh=1;
+        m.change_status++;
+        window.history.go(-1);
+      }
+      //-------------------------------------
+    }
+  </script>
+  <style>
+    /*VmInclude:__HOST__/assets/css/wapp-form.css*/
+  </style>
+</div></body></html>

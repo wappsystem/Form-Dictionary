@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                    if(e.type=='tel') {e.type='text';e.value=e.name}
+                    if(e.type=='email') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID>
+
+<form id="F__ID">
+	<div id="wrapper">
+		<main id="main">
+			<section class="inner-banner" style="background-image:url('assets/images/inner-banner.png');">
+			</section>
+
+			<section class="section thankyou-block eligible">
+				<div class="container">
+					<div class="thankyou-text">
+						<h1 class="h2">Thank you for completing these questions.</h1>
+						<p>Based on the responses you have provided you may be <strong>eligible</strong> for the research study.</p>
+						<p>If you are interested to participate, please provide your details and a member of our <br /> team will be in contact with you.</p>
+					</div>
+					<div class="form-wrap">
+						<form class="thankyou-eligible-form" action="#">
+							<div class="form-item-wrap">
+								<div class="form-group">
+									<label for="fname">First Name</label>
+									<input type="text" id="fname" name="first_name" placeholder="First Name" class="form-control">
+								</div>
+								<div class="form-group">
+									<label for="lname">Last Name</label>
+									<input type="text" id="lname" name="last_name" placeholder="last Name" class="form-control">
+								</div>
+							</div>
+							<div class="form-item-wrap">
+								<div class="form-group">
+									<label for="email">Email Address</label>
+									<input type="email" id="email" name="email" placeholder="Email Address" class="form-control">
+								</div>
+								<div class="form-group">
+									<label for="phone">Phone Number</label>
+									<input type="tel" id="phone" name="phone" placeholder="Phone Number" class="form-control">
+								</div>
+							</div>
+
+							<div class="submit-wrap">
+								<button id="submit__ID" type="submit" value="submit" class="btn">Submit <img style="padding-bottom: 2px;" src="assets/images/icon-arrow.png"></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+</form>
+
+	<!--<script src="assets/dist/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/dist/js/brain-clean-bundle.js"></script>-->
+	<script>
+        function F__ID() {
+            VmInclude: '__HOST__/assets/js/form.01.js'
+            //---------------------------------------
+            $('#D__ID').on('load', function () {
+            });
+
+            var old_submit = m.submit;
+            m.submit = function (event) {
+                old_submit(event);
+                if (m.prefix == undefined) {
+                        $vm.load_module('thank-you', '', {});
+                }
+                else {
+                    $vm.load_module(m.prefix + 'thank-you', '', {})
+                }
+            }
+        }
+    </script>
+    <style>
+    </style>
+</div>
+
+</body></html>

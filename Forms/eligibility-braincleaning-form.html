@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                    if(e.type=='tel') {e.type='text';e.value=e.name}
+                    if(e.type=='email') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID>
+    <form id="F__ID">
+        <main id="main">
+			<section class="inner-banner" style="background-image:url('assets/images/inner-banner.png');">
+				<div class="container">
+				</div>
+			</section>
+			<section class="section form-block p-large">
+				<div class="container">
+					<div class="heading-block text-center">
+						<h2>Brain Cleaning Questionnaire</h2>
+						<p>Please answer the following questions.</p>
+						<p>The Woolcock is the leading respiratory and sleep research organisation in Australia. We are determined that our work creates a better life
+							for people living with sleep and respiratory disorders. Our dedication to wellbeing, participant security and safety is at the very heart of what we do.</p>
+					</div>
+
+					<div class="form-wrap">
+						<div class="form-group">
+							<label for="age">1. What is your age?</label>
+							<input type="number" id="age" name="age" min="0" step="1" required >
+						</div>
+
+						<div class="form-group">
+							<label for="fluent-english">2. Are you fluent in english?</label>
+							<div class="form-radio-group">
+								<div class="radio-wrap">
+									<input type="radio" id="yes" name="fluent_english" value="Y" required />
+									<label for="yes">Yes</label>
+								</div>
+								<div class="radio-wrap">
+									<input type="radio" id="no" name="fluent_english" value="N" />
+									<label for="no">No</label>
+								</div>
+							</div>
+                        </div>
+						<div class="form-group">
+							<label for="osa">3. Have you been diagnosed with Obstructive Sleep Apnoea (OSA) <u>within</u> the last 2 years?</label>
+							<div class="form-radio-group">
+								<div class="radio-wrap">
+									<input type="radio" id="diagnosed__ID" name="diagnosed" value="Y" required />
+									<label for="diagnosed__ID">Yes</label>
+								</div>
+								<div class="radio-wrap">
+									<input type="radio" id="diagnosed2__ID" name="diagnosed" value="N" />
+									<label for="diagnosed2__ID">No</label>
+								</div>
+							</div>
+                        </div>
+						<div class="form-group">
+							<label for="osa">4. Are you currently using a CPAP machine for Obstructive Sleep Apnoea (OSA)?</label>
+							<div class="form-radio-group">
+								<div class="radio-wrap">
+									<input type="radio" id="yes4" name="cpap" value="Y" required />
+									<label for="yes4">Yes</label>
+								</div>
+								<div class="radio-wrap">
+									<input type="radio" id="no4" name="cpap" value="N" />
+									<label for="no4">No</label>
+								</div>
+							</div>
+							<div class="form-sub-group" id="S1_3a__ID">
+								<label for="night-hour">A. On average, for how many hours do you use your CPAP machine at night?</label>
+								<div class="form-radio-group">
+									<div class="radio-wrap">
+										<input type="radio" id="cpap_hrs_1__ID" name="cpap_hrs" value="5-" />
+										<label for="cpap_hrs_1__ID">Less than 5 hours per night</label>
+									</div>
+									<div class="radio-wrap">
+										<input type="radio" id="cpap_hrs_2__ID" name="cpap_hrs" value="5+" />
+										<label for="cpap_hrs_2__ID">5 or more hours per night </label>
+									</div>
+								</div>
+                                <div class="form-sub-group" id="S1_3a_b__ID">
+                                    <label for="night-hour">B. On average, how many days per week do you use your CPAP machine?</label>
+                                    <div class="form-radio-group">
+                                        <div class="radio-wrap">
+                                            <input type="radio" id="cpap_days_1__ID" name="cpap_days" value="5-" />
+                                            <label for="cpap_days_1__ID">Less than 5 days per week</label>
+                                        </div>
+                                        <div class="radio-wrap">
+                                            <input type="radio" id="cpap_days_2__ID" name="cpap_days" value="5+" />
+                                            <label for="cpap_days_2__ID">5 or more days per week</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-sub-group" id="S1_3a_c__ID">
+                                        <label for="night-hour">C. Have you been using your CPAP machine consistently for the last 3 months?</label>
+                                        <div class="form-radio-group">
+                                            <div class="radio-wrap">
+                                                <input type="radio" id="cpap_consist_1__ID" name="cpap_consist" value="Y" />
+                                                <label for="cpap_consist_1__ID">Yes</label>
+                                            </div>
+                                            <div class="radio-wrap">
+                                                <input type="radio" id="cpap_consist_2__ID" name="cpap_consist" value="N" />
+                                                <label for="cpap_consist_2__ID">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+                        </div>
+						<!--<div class="form-group">
+							<label for="osa">5. Have you been using your CPAP machine regularly for at least 5 hours each night for the last 3 months?</label>
+							<div class="form-radio-group">
+								<div class="radio-wrap">
+									<input type="radio" id="using_cpap__ID" name="using_cpap" value="Y" required />
+									<label for="using_cpap__ID">Yes</label>
+								</div>
+								<div class="radio-wrap">
+									<input type="radio" id="using_cpap2__ID" name="using_cpap" value="N" />
+									<label for="using_cpap2__ID">No</label>
+								</div>
+							</div>
+						</div>-->
+
+						<div class="form-group">
+							<label for="cpac">5. Are you willing to temporarily withdraw from CPAP use for 2 weeks?</label>
+							<div class="form-radio-group">
+								<div class="radio-wrap">
+									<input type="radio" id="yes6" name="withdraw" value="Y" required />
+									<label for="yes6">Yes</label>
+								</div>
+								<div class="radio-wrap">
+									<input type="radio" id="no6" name="withdraw" value="N" />
+									<label for="no6">No</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="sydney-region">6. Do you live in the greater Sydney Region of NSW?</label>
+							<div class="form-radio-group">
+								<div class="radio-wrap">
+									<input type="radio" id="yes7" name="sydney" value="Y" required />
+									<label for="yes7">Yes</label>
+								</div>
+								<div class="radio-wrap">
+									<input type="radio" id="no7" name="sydney" value="N" />
+									<label for="no7">No</label>
+								</div>
+							</div>
+                            <div id="S1_5a__ID">
+                                <div class="form-sub-group">
+                                    <label for="travel">a. If yes, are you willing to travel and stay for a 30-hour research visit at the Woolcock Institute in Macquarie Park on two occasions that are 2 -weeks apart?</label>
+                                    <div class="form-radio-group">
+                                        <div class="radio-wrap">
+                                            <input type="radio" id="yes7a" name="visit" value="Y"  />
+                                            <label for="yes7a">Yes</label>
+                                        </div>
+                                        <div class="radio-wrap">
+                                            <input type="radio" id="no7a" name="visit" value="N" />
+                                            <label for="no7a">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-sub-group">
+                                    <label for="stay">b. If yes, Are you willing to have a plastic cannula inserted into your arm for blood collection for 24hrs during each of your stays?</label>
+                                    <div class="form-radio-group">
+                                        <div class="radio-wrap">
+                                            <input type="radio" id="yes7b" name="cannula" value="Y"  />
+                                            <label for="yes7b">Yes</label>
+                                        </div>
+                                        <div class="radio-wrap">
+                                            <input type="radio" id="no7b" name="cannula" value="N" />
+                                            <label for="no7b">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+						<div class="submit-wrap">
+                            <button type="submit" d=1 class="btn">Submit</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+    </form>
+    <script>
+        function F__ID() {
+            //VmInclude: '__HOST__/assets/js/form.01.js'
+            //---------------------------------------
+            //m.before_submit = function (data, index) {
+            //return true;
+            //}
+            //---------------------------------------
+            $('#D__ID').on('load', function () {
+                if ($("#F__ID input[name=cpap]:checked").val() == 'Y') {
+                    $('#S1_3a__ID').show();
+                    $('#F__ID input[name=cpap_hrs]').prop('required', 'true');
+                }
+                else {
+                    $('#S1_3a__ID').hide();
+                    $('#F__ID input[name=cpap_hrs]').removeAttr('required');
+                }
+                //-----------------
+                if ($("#F__ID input[name=cpap_hrs]:checked").val() == '5+') {
+                    $('#S1_3a_b__ID').show();
+                    $('#F__ID input[name=cpap_days]').prop('required', 'true');
+                }
+                else {
+                    $('#S1_3a_b__ID').hide();
+                    $('#F__ID input[name=cpap_days]').removeAttr('required');
+                }
+                //-----------------
+                if ($("#F__ID input[name=cpap_days]:checked").val() == '5+') {
+                    $('#S1_3a_c__ID').show();
+                    $('#F__ID input[name=cpap_consist]').prop('required', 'true');
+                }
+                else {
+                    $('#S1_3a_c__ID').hide();
+                    $('#F__ID input[name=cpap_consist]').removeAttr('required');
+                }
+                //-----------------                
+                if ($("#F__ID input[name=sydney]:checked").val() == 'Y') {
+                    $('#S1_5a__ID').show();
+                    $('#F__ID input[name=visit]').prop('required', 'true');
+                    $('#F__ID input[name=cannula]').prop('required', 'true');
+                }
+                else {
+                    $('#S1_5a__ID').hide();
+                    $('#F__ID input[name=visit]').removeAttr('required');
+                    $('#F__ID input[name=cannula]').removeAttr('required');
+                }
+                $(window).scrollTop(0);
+            });
+            //---------------------------------------
+            $("#F__ID input[name=cpap]").on('change', function () {
+                if ($("#F__ID input[name=cpap]:checked").val() == 'Y') {
+                    $('#S1_3a__ID').show();
+                    $('#F__ID input[name=cpap_hrs]').prop('required', 'true');
+                }
+                else {
+                    $('#S1_3a__ID').hide();
+                    $('#F__ID input[name=cpap_hrs]').removeAttr('required');
+                }
+            });
+            //---------------------------------------
+            $("#F__ID input[name=cpap_hrs]").on('change', function () {
+                if ($("#F__ID input[name=cpap_hrs]:checked").val() == '5+') {
+                    $('#S1_3a_b__ID').show();
+                    $('#F__ID input[name=cpap_days]').prop('required', 'true');
+                }
+                else {
+                    $('#S1_3a_b__ID').hide();
+                    $('#F__ID input[name=cpap_days]').removeAttr('required');
+                }
+            });
+            //---------------------------------------
+            $("#F__ID input[name=cpap_days]").on('change', function () {
+                if ($("#F__ID input[name=cpap_days]:checked").val() == '5+') {
+                    $('#S1_3a_c__ID').show();
+                    $('#F__ID input[name=cpap_consist]').prop('required', 'true');
+                }
+                else {
+                    $('#S1_3a_c__ID').hide();
+                    $('#F__ID input[name=cpap_consist]').removeAttr('required');
+                }
+            });
+            //---------------------------------------
+            $("#F__ID input[name=sydney]").on('change', function () {
+                if ($("#F__ID input[name=sydney]:checked").val() == 'Y') {
+                    $('#S1_5a__ID').show();
+                    $('#F__ID input[name=visit]').prop('required', 'true');
+                    $('#F__ID input[name=cannula]').prop('required', 'true');
+                }
+                else {
+                    $('#S1_5a__ID').hide();
+                    $('#F__ID input[name=visit]').removeAttr('required');
+                    $('#F__ID input[name=cannula]').removeAttr('required');
+                }
+            });
+            //---------------------------------------
+            $('#F__ID button').on('click', function (event) {
+                if (parseInt($("input[name='age']").val()) <18 || parseInt($("input[name='age']").val())>65 || 
+                        $("input[name='fluent_english']:checked").val() == 'N' || 
+                        $("input[name='diagnosed']:checked").val() == 'N' || 
+                        $("input[name='cpap']:checked").val() == 'N' || 
+                        //$("input[name='using_cpap']:checked").val() == 'N' ||                         
+                        ($("input[name='cpap']:checked").val() == 'Y' && $("input[name='cpap_hrs']:checked").val() == '5-') || 
+                        ($("input[name='cpap']:checked").val() == 'Y' && $("input[name='cpap_hrs']:checked").val() == '5+' && $("input[name='cpap_days']:checked").val() == '5-') || 
+                        ($("input[name='cpap']:checked").val() == 'Y' && $("input[name='cpap_hrs']:checked").val() == '5+' && $("input[name='cpap_days']:checked").val() == '5+' && $("input[name='cpap_consist']:checked").val() == 'N' ) || 
+                        //$("input[name='cpap_hrs']:checked").val() == '0-2' || $("input[name='cpap_hrs']:checked").val() == '2-4' /*|| $("input[name='cpap_hrs']:checked").val() == '4-6'*/) ||
+                        $("input[name='withdraw']:checked").val() == 'N' ||
+                        $("input[name='sydney']:checked").val() == 'N' ||
+                        ($("input[name='sydney']:checked").val() == 'Y' && 
+                        $("input[name='visit']:checked").val() == 'N' || $("input[name='cannula']:checked").val() == 'N')) 
+                    {
+                        $('#F__ID *').removeAttr('disabled');
+                        old_submit(event);
+                        if (m.prefix == undefined) { $vm.load_module('not_elig1', '', {}); }
+                        else $vm.load_module(m.prefix + 'not_elig1', '', {});
+                    }
+                    else {
+                        $('#F__ID *').removeAttr('disabled');
+                        old_submit(event);
+                    if (m.prefix == undefined) { $vm.load_module('contact-form', '', {}); }
+                        else $vm.load_module(m.prefix + 'contact-form', '', {});
+                    }
+            })
+            var old_submit = m.submit;
+            m.submit = function (event) {
+                //event.preventDefault();
+            }
+
+        }
+    </script>
+    <style>
+    </style>
+</div>
+</body>
+</html>
