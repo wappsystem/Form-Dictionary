@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link href="wappsystem-form.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+        <script type="text/javascript">
+            function load_names() {
+                var myCustomVariableName = document.querySelectorAll('input').forEach(function(e){
+                    console.log(e)
+                    if(e.type=='text' && e.name!='File_Name') {e.value=e.name;console.log(e.name)}
+                    if(e.type=='radio') { var rvalue=e.value; e.type='text'; e.value=e.name + ' = '+rvalue;}
+                    if(e.type=='checkbox') {e.type='text';e.value=e.name}
+                    if(e.type=='date') {e.type='text';e.value=e.name}
+                    if(e.type=='time') {e.type='text';e.value=e.name}
+                    if(e.type=='number') {e.type='text';e.value=e.name}
+                    if(e.type=='range') {e.type='text';e.value=e.name}
+                    if(e.type=='tel') {e.type='text';e.value=e.name}
+                    if(e.type=='email') {e.type='text';e.value=e.name}
+                });
+                var myCustomVariableName = document.querySelectorAll('textarea').forEach(function(e){
+                    console.log(e)
+                    e.value=e.name;
+                });
+                myCustomVariableName = document.querySelectorAll('select').forEach(function(e){
+
+                    console.log(e.options[1])
+                    e.options[0].text=e.name;
+                    for (var i=1;i<e.options.length;i++){
+                        e.options[i].text=e.options[i].text+" = "+e.options[i].value;
+                    }
+                });
+            }
+            window.onload = load_names;
+          </script>    
+          </head>    
+<div id=D__ID>
+    <div class="bg-light">
+        <form id=F__ID>
+            <div id=page1__ID class="row  mr-0 ml-0 p-4" style="background-color:#205F7B;">
+                <div class="col-lg-1 col-sm-0 "></div>
+                <div class="col-lg-9 col-sm-12 text-center text-white">
+                    <span style="color:#888">&nbsp;</span>
+                    <h2>ExCEED Registration Form</h2>
+                </div>
+                <div class="col-lg-1 col-sm-0 "></div>
+            </div>
+            <div id=quest5__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+                <div class="form-group box">
+                    <div class="row">
+                        <div class="col-sm control-group">
+                            <h3>Thank you for completing these questions.</h3>
+                            <h4>Your responses indicate that you are eligible to participate in the study. Please proceed by clicking next to read the Participant Information Sheet carefully and at your own pace, and if you would like to consent to the study please tick the box and digitally sign the consent form at the end. </h4>
+                        </div>
+                    </div> 
+                </div>                     
+                <div class="form-group box">
+                    <div class="row">
+                        <div class="col-sm control-group">
+                            <h5>Please proceed by reading the <a href="#" data-toggle="modal" data-target="#terms-txt">Participant Information Sheet(click here)</a> carefully and at your
+                                own pace and tick the box for consent
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group box">
+                    <h5>I consent to participate in the study</h5>
+                    <div class="questiongroup">
+                        <fieldset>
+                        <label class="checkboxes">
+                            <input type="checkbox" name="Consent" value="Yes">
+                            <span class="check_checkmark"></span> Yes
+                        </label><br>
+                    </div>                              
+                </div>
+                <div id=contact__ID>
+                    <div class="form-group box">
+                        <h3>Contact details</h3>
+                        <div class="questiongroup ">
+                            <fieldset class="subquestions">
+                                <label><span class="">First name</span>
+                                        <input class="form-control" type="text" name="first_name" required >
+                                </label><br>
+                                <label><span class="" style="color:#dbdbdb">Family name</span>
+                                        <input class="form-control" type="text" name="last_name"  >
+                                </label><br>
+                            </fieldset>
+                        </fieldset>
+                        <h3>Contact preference</h3>
+                        <fieldset class="pl-4">
+                            <label class="radiobuttons ">
+                                <input type="radio" name="contact" value="1" required>
+                                <span class="checkmark"></span>Text
+                            </label>
+                            <label class="radiobuttons ">
+                                <input type="radio" name="contact" value="2">
+                                <span class="checkmark"></span>Email 
+                            </label>
+                            <label class="radiobuttons ">
+                                <input type="radio" name="contact" value="3">
+                                <span class="checkmark"></span>Both 
+                            </label>
+                        </fieldset>
+                        <fieldset class="subquestions">
+                                <label><span class="" id="text__ID">Mobile number</span>
+                                    <input type="tel" class="form-control" name="phone" id="mobileNumber__ID" required placeholder="XXXX-XXX-XXX" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}">
+                                </label><br>
+                            </fieldset>
+                            <fieldset class="subquestions">
+                                <label style="width:100%"><span class="" id="email__ID">Email Address</span>
+                                    <input class="form-control" type="email" name="email" required >
+                                </label><br>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group box" id="link__ID" style="display:xnone!important">
+                    <div class="text-center">
+                        Continue ..<br><br>
+                        <i>Click on the link below to continue. Save the link to your favorites so you can easlily find it, if you need to return to the quesstionnaires.</i><br><br>
+                        <a id=exceed_registration__ID target="_blank" style="color:#000;" ><span style='font-size:1.2rem;font-weight:bold;' id=refnum__ID></span></a>
+                        <br><br>
+                    </div>
+                </div>
+                <div style="display:xnone">
+                    <input type=text class=form-control name=_Password>
+                    <input type=text class=form-control name=List>
+                </div>
+                <div id=submit_btn__ID class="box" style="text-align:right">
+                    <div class="box-item">
+                        <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                </div>
+                <div id=quest51__ID style='max-width:800px;margin-left:auto;margin-right:auto;'>
+                    <br>
+                    <hr>
+                    <div class="text-center">
+                        Contact Us
+                        <br><br>
+                        Name: Matthew Rahimi<br>
+                        Phone:  0401 615 177<br>
+                        Email:  matthew.rahimi@mq.edu.au<br><br>
+                        Thanks you for your time and effort,<br>
+                        <b>The ExCEED Research Team</b><br>
+                    </div>
+                </div>
+                <!----------------------------------------->
+            </div>
+        </form>
+    </div>
+    <!----------------------------------------->
+    <div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="termsLabel">Patient Information sheet</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn_1" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <script>
+        function F__ID() {
+            //VmInclude: '__COMPONENT__/f/form.01.js'
+            //---------------------------------------
+            $('#D__ID').on('load', function () {
+                //console.log(JSON.stringify(m))
+                $('#F__ID input[name=_Password').val($vm.vm_password(8,false));
+                console.log("BB: "+$('#F__ID input[name=Consent]:checked').val())
+                $('#contact__ID').hide();
+                $('#submit_btn__ID').hide();
+            });
+            //-------------------------------------
+            $('#mobileNumber__ID').on('change', function () {
+                var mn = $('#mobileNumber__ID').val();
+                if (mn.length == 10) {
+                    $('#mobileNumber__ID').val(mn.substring(0, 4) + '-' + mn.substring(4, 7) + '-' + mn.substring(7, 10))
+                }
+            })
+            $('#F__ID input[name=Consent]').on('change', function () {
+                console.log("AA: "+$('#F__ID input[name=Consent]:checked').val())
+                if($('#F__ID input[name=Consent]:checked').val()=='Yes'){
+                    $('#contact__ID').show();
+                    $('#submit_btn__ID').show();
+                }
+                else{
+                    $('#contact__ID').hide();
+                    $('#submit_btn__ID').hide();
+                }
+            });
+            //---------------------------------------
+            $('#F__ID input[name=contact]').on('change', function () {
+                console.log($('#F__ID input[name=contact]:checked').val())
+                if($('#F__ID input[name=contact]:checked').val()=='1'){
+                    $('#F__ID input[name=phone]').prop('required',true);
+                    $('#F__ID input[name=email]').removeAttr('required');
+                    $('#email__ID').css('color',"#dbdbdb")
+                    $('#text__ID').css('color',"#444645")
+                }
+                else if($('#F__ID input[name=contact]:checked').val()=='2'){
+                    $('#F__ID input[name=email]').prop('required',true);
+                    $('#F__ID input[name=phone]').removeAttr('required');
+                    $('#email__ID').css('color',"#444645image.png")
+                    $('#text__ID').css('color',"#dbdbdb")
+                }
+                else if($('#F__ID input[name=contact]:checked').val()=='3'){
+                    $('#F__ID input[name=phone]').prop('required',true);
+                    $('#F__ID input[name=email]').prop('required',true);                    
+                    $('#email__ID').css('color',"#444645")
+                    $('#text__ID').css('color',"#444645")
+                }
+            });
+            //---------------------------------------
+            m.after_insert = function (data,index) {
+                var db=""; 
+                //console.log(JSON.stringify(index) + " - "+index.nr.UID)
+                if(window.location.toString().indexOf('tb=demo')!=-1) db="&tb=demo";
+                var d="";  if(window.location.toString().indexOf('_d=1')!=-1) d="&_d=1";
+                var p="";  if(window.location.toString().indexOf('_p=1')!=-1) p="&_p=1";
+                var u="?username="+index.nr.UID+"&password="+index.nr.Data._Password;
+                var q_url=$vm.hosting_path+"/bl_quest.html"+u+db+d+p;
+                $('#refnum__ID').text(q_url);
+                $('#exceed_registration__ID').attr("href",q_url)
+                $('#link__ID').show();
+
+                //- UPDATE Screening record with participant UID -----
+                var rid=m.input.rec_id
+                var datascreen=m.input.screen_data;
+                datascreen.Participant=index.nr.UID;
+                datascreen.Participant_uid=index.nr.UID;
+                var tables=$vm.module_list["screening-data"].Table; 
+                //console.log("data: "+JSON.stringify(datascreen))             
+                $vm.request({cmd:'update',id:rid,table:tables,data:datascreen,index:index},function(res){
+                    //-----------------------------
+                    if(res.status=="lk"){
+                        $vm.alert("This record is locked.");
+                        return;
+                    }
+                    //-----------------------------
+                    if(res.status=="np"){
+                        alert("No permission to update this record.");
+                        return;
+                    }
+                });
+                // -------------------------------------------------
+                var param = [];
+				// var url='https://prod-02.australiasoutheast.logic.azure.com:443/workflows/df2a2d91ca08424b90e736613ce32f2c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=vfTTSvvitkv-ttO0fv656_ZJCwSyQohXsgSObvsQR8g';
+                // var sms_url='https://prod-29.australiasoutheast.logic.azure.com:443/workflows/f0bf0fd80b8745eb995fe0e3b3c15987/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=8qkbA-R9P0lArdlbWBYIzKCqgiFv1eXJYJ_49X3QmZ8'
+				var url='https://prod-14.australiasoutheast.logic.azure.com:443/workflows/b32e1b551e714a9cbb9568c0daf8dca6/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=YCrB5_3cSQQtxy3EJOVwgYTYBXVL9bAfE1my4qwqvEs';
+                var sms_url='https://prod-22.australiasoutheast.logic.azure.com:443/workflows/820a39043b3e4a5aad3a688121a44db9/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=YXNWHex7Jj23UoCLdCagxuDrDmNVIG9kjiUB-3viTpg';
+
+                console.log("DATA: "+JSON.stringify(data))
+				param.push(data.email); //0
+				param.push(data.first_name); //1
+				param.push(q_url); //2
+				param.push(''); //3 Access code
+				param.push(data.phone) //4
+				param.push(data.contact) //5
+				param.push(url) //6
+				param.push(sms_url) //7
+				send_email(param);              
+            }
+            //-------------------------------------
+            var send_email = function (param) {
+                var url = param[6]
+                var sms_url = param[7]
+                if(param[5]=='2' || param[5]=='3'){
+                    var data = {
+                        "emailaddress": "" + param[0] + "",
+                        "first_name": "" + param[1] + "",
+                        "link": "" + param[2] + "",
+                        "code": "" + param[3] + ""
+                    }
+                    var xmlHttp = new XMLHttpRequest();
+                    xmlHttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                        }
+                        else if (this.readyState == 4 && this.status == 403) {
+                        }
+                        if (this.status == 404) {
+                            $vm.alert(url + ", 404 (Not found)");
+                        }
+                    }
+                
+                    xmlHttp.open("POST", url, true); // true for asynchronous
+                    xmlHttp.setRequestHeader("Content-Type", "application/json");
+                    xmlHttp.send(JSON.stringify(data));
+                    //alert("Registration email sent" +JSON.stringify(data))
+                }
+                //------------------------------------
+                //SMS alert
+				//------------------------------------
+                if(param[5]=='1' || param[5]=='3'){
+                    console.log("Sending sms")
+                    var sms_data = {
+                        "emailaddress": "" + param[4].replace(/-/g,'') + "@e2s.directsms.com.au",
+                        "first_name": "" + param[1] + "",
+                        "link": "" + param[2] + "",
+                        "code": "" + param[3] + ""
+                    }
+                    var sms_xmlHttp = new XMLHttpRequest();
+                    sms_xmlHttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                        }
+                        else if (this.readyState == 4 && this.status == 403) {
+                        }
+                        if (this.status == 404) {
+                            $vm.alert(url + ", 404 (Not found)");
+                        }
+                    }
+                    sms_xmlHttp.open("POST", sms_url, true); // true for asynchronous
+                    sms_xmlHttp.setRequestHeader("Content-Type", "application/json");
+                    sms_xmlHttp.send(JSON.stringify(sms_data));
+                    //alert("Registration sms sent" +JSON.stringify(sms_data))
+				}
+			}
+            //--------------------------------
+
+        }
+    </script>
+    <style>
+        #submit_box__ID {
+            text-align: right;
+        }
+        /*VmInclude:__HOST__/assets/css/style.css*/
+        /*VmInclude:__HOST__/assets/css/wappsystem-form.css*/
+    </style>
+</div>
+</body></html>
